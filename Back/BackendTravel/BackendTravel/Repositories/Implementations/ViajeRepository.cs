@@ -32,16 +32,16 @@ namespace BackendTravel.Repositories.Implementations
             await _context.SaveChangesAsync();
         }
 
-        public void Update(Viaje viaje)
+        public async Task UpdateAsync(Viaje viaje)
         {
             _context.Viajes.Update(viaje);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void Delete(Viaje viaje)
+        public async Task DeleteAsync(Viaje viaje)
         {
             _context.Viajes.Remove(viaje);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }
