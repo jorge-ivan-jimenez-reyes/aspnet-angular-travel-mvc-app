@@ -10,7 +10,7 @@ namespace BackendTravel.MappingProfiles
         public MappingProfile()
         {
             // Mapeo bidireccional entre Viaje y ViajeDto
-            CreateMap<Viaje, ViajeDto>().ReverseMap();
+            CreateMap<Viaje, ViajeDTOs>().ReverseMap();
         }
     }
 }

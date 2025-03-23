@@ -5,6 +5,7 @@ using BackendTravel.Repositories.Interfaces;
 using BackendTravel.Repositories.Implementations;
 using BackendTravel.Services.Interfaces;
 using BackendTravel.Services.Implementations;
+using BackendTravel.MappingProfiles; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +16,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")) ); 
 
-    
+builder.Services.AddScoped<IViajeRepository, ViajeRepository>();
+builder.Services.AddScoped<IViajeService, ViajeService>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 var app = builder.Build();
 
 
