@@ -22,7 +22,7 @@ namespace BackendTravel.Services.Implementations
         public async Task<IEnumerable<ViajeDTOs>> GetAllViajesAsync()
         {
             var viajes = await _viajeRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<ViajeDto>>(viajes);
+            return _mapper.Map<IEnumerable<ViajeDTOs>>(viajes);
         }
 
         public async Task<ViajeDTOs> GetViajeByIdAsync(int id)
