@@ -13,6 +13,12 @@ public class AppDbContext : DbContext
 
      protected override void OnModelCreating(ModelBuilder modelBuilder)
      {
+          
+          modelBuilder.Entity<Viaje>()
+               .Property(v => v.Costo)
+               .HasPrecision(10, 2); 
+
+          
           // Relaciones personalizadas para Origen/Destino
           modelBuilder.Entity<Viaje>()
                .HasOne(v => v.Origen)
