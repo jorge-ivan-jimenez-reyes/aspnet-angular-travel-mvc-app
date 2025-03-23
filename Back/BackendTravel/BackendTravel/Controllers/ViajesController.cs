@@ -21,7 +21,7 @@ namespace BackendTravel.Controllers
 
         // GET: api/viajes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ViajeDto>>> GetAll()
+        public async Task<ActionResult<IEnumerable<ViajeDTOs>>> GetAll()
         {
             try
             {
@@ -37,7 +37,7 @@ namespace BackendTravel.Controllers
 
         // GET: api/viajes/{id}
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<ViajeDto>> GetById(int id)
+        public async Task<ActionResult<ViajeDTOs>> GetById(int id)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace BackendTravel.Controllers
 
         // POST: api/viajes
         [HttpPost]
-        public async Task<ActionResult<ViajeDto>> Post([FromBody] ViajeDto viajeDto)
+        public async Task<ActionResult<ViajeDTOs>> Post([FromBody] ViajeDTOs viajeDto)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace BackendTravel.Controllers
 
         // PUT: api/viajes/{id}
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Put(int id, [FromBody] ViajeDto viajeDto)
+        public async Task<IActionResult> Put(int id, [FromBody] ViajeDTOs viajeDto)
         {
             try
             {

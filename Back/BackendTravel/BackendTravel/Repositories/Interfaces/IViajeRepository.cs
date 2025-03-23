@@ -1,10 +1,15 @@
-namespace BackendTravel.Repositories.Interfaces;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using BackendTravel.Models.Entities;
 
-public interface IViajeRepository
+namespace BackendTravel.Repositories.Interfaces
 {
-    Task<IEnumerable<Viaje>> GetAllAsync();
-    Task<Viaje> GetByIdAsync(int id);
-    Task AddAsync(Viaje viaje);
-    void Update(Viaje viaje);
-    void Delete(Viaje viaje);
+    public interface IViajeRepository
+    {
+        Task<IEnumerable<Viaje>> GetAllAsync();
+        Task<Viaje> GetByIdAsync(int id);
+        Task AddAsync(Viaje viaje);
+        Task UpdateAsync(Viaje viaje);
+        Task DeleteAsync(Viaje viaje);
+    }
 }

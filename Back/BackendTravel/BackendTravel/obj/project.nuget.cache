@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5qp6Iet4k/k=",
+  "dgSpecHash": "h1r7lmE8U1k=",
   "success": true,
   "projectFilePath": "/Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/BackendTravel.csproj",
   "expectedPackageFiles": [
+    "/Users/jorgejimenez/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/jorgejimenez/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/jorgejimenez/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/jorgejimenez/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
     "/Users/jorgejimenez/.nuget/packages/entityframework/6.5.1/entityframework.6.5.1.nupkg.sha512",

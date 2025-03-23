@@ -2,7 +2,7 @@
 using AutoMapper;
 using BackendTravel.Models.DTOs;
 using BackendTravel.Models.Entities;
-using BackendTravel.Repositories.Interfaces; // Si tu repositorio está en otra carpeta
+using BackendTravel.Repositories.Interfaces; 
 using BackendTravel.Services.Interfaces;
 
 namespace BackendTravel.Services.Implementations
@@ -18,26 +18,26 @@ namespace BackendTravel.Services.Implementations
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<ViajeDto>> GetAllViajesAsync()
+        public async Task<IEnumerable<ViajeDTOs>> GetAllViajesAsync()
         {
             var viajes = await _viajeRepository.GetAllAsync();
             return _mapper.Map<IEnumerable<ViajeDto>>(viajes);
         }
 
-        public async Task<ViajeDto> GetViajeByIdAsync(int id)
+        public async Task<ViajeDTOs> GetViajeByIdAsync(int id)
         {
             var viaje = await _viajeRepository.GetByIdAsync(id);
-            return _mapper.Map<ViajeDto>(viaje);
+            return _mapper.Map<ViajeDTOs>(viaje);
         }
 
-        public async Task<ViajeDto> CreateViajeAsync(ViajeDto viajeDto)
+        public async Task<ViajeDTOs> CreateViajeAsync(ViajeDto viajeDto)
         {
             var viajeEntity = _mapper.Map<Viaje>(viajeDto);
             await _viajeRepository.AddAsync(viajeEntity);
             return _mapper.Map<ViajeDto>(viajeEntity);
         }
 
-        public async Task<bool> UpdateViajeAsync(ViajeDto viajeDto)
+        public async Task<bool> UpdateViajeAsync(ViajeDTOs viajeDto)
         {
             var viajeEntity = await _viajeRepository.GetByIdAsync(viajeDto.Id);
             if (viajeEntity == null) return false;

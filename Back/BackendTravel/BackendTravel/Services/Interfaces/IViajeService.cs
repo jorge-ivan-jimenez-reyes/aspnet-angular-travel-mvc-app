@@ -1,11 +1,13 @@
+
+using BackendTravel.Models.DTOs;
 namespace BackendTravel.Services.Interfaces
 {
     public interface IViajeService
     {
-        Task<IEnumerable<ViajeDto>> GetAllViajesAsync();
-        Task<ViajeDto> GetViajeByIdAsync(int id);
-        Task<ViajeDto> CreateViajeAsync(ViajeDto viajeDto);
-        Task<bool> UpdateViajeAsync(ViajeDto viajeDto);
+        Task<IEnumerable<ViajeDTOs>> GetAllViajesAsync();
+        Task<ViajeDTOs> GetViajeByIdAsync(int id);
+        Task<ViajeDTOs> CreateViajeAsync(ViajeDTOs viajeDto);
+        Task<bool> UpdateViajeAsync(ViajeDTOs viajeDto);
         Task<bool> DeleteViajeAsync(int id);
     }
 }
