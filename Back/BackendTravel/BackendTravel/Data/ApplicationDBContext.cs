@@ -19,7 +19,6 @@ public class AppDbContext : DbContext
                .HasPrecision(10, 2); 
 
           
-          // Relaciones personalizadas para Origen/Destino
           modelBuilder.Entity<Viaje>()
                .HasOne(v => v.Origen)
                .WithMany(l => l.ViajesOrigen)
