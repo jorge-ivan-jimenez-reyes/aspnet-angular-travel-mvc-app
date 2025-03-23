@@ -1,6 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using BackendTravel.Data;
+using BackendTravel.Repositories.Interfaces;
+using BackendTravel.Repositories.Implementations;
+using BackendTravel.Services.Interfaces;
+using BackendTravel.Services.Implementations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
