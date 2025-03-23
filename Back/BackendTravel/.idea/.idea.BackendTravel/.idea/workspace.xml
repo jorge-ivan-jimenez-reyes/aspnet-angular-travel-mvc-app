@@ -8,23 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Transporte.cs">
-      <change beforePath="$PROJECT_DIR$/BackendTravel/Data/ApplicationDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Data/ApplicationDBContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.runtimeconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/ref/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/ref/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/refint/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/refint/BackendTravel.dll" afterDir="false" />
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="remove">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +24,7 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/Data/ApplicationDBContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -162,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
-      <workItem from="1742756140629" duration="5053000" />
+      <workItem from="1742756140629" duration="5812000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -276,7 +262,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742762771860</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="dbinitial">
+      <option name="closed" value="true" />
+      <created>1742763297637</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1742763297637</updated>
+    </task>
+    <task id="LOCAL-00016" summary="remove">
+      <option name="closed" value="true" />
+      <created>1742763311677</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742763311677</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +300,8 @@
     <MESSAGE value="connection" />
     <MESSAGE value="clases" />
     <MESSAGE value="Transporte.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transporte.cs" />
+    <MESSAGE value="dbinitial" />
+    <MESSAGE value="remove" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove" />
   </component>
 </project>
