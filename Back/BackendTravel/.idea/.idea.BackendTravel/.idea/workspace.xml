@@ -8,24 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="mapeo">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/BackendTravel.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/BackendTravel.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/Repositories/Implementations/ViajeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Repositories/Implementations/ViajeRepository.cs" afterDir="false" />
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="fix bugs">
       <change beforePath="$PROJECT_DIR$/BackendTravel/Services/Implementations/ViajeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Services/Implementations/ViajeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/Services/Interfaces/IViajeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Services/Interfaces/IViajeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/BackendTravel.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/BackendTravel.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
-      <workItem from="1742756140629" duration="10266000" />
+      <workItem from="1742756140629" duration="10638000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -399,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742767498778</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix bugs">
+      <option name="closed" value="true" />
+      <created>1742768450448</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1742768450448</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,6 +426,7 @@
     <MESSAGE value="MappingProfile.cs" />
     <MESSAGE value="d" />
     <MESSAGE value="mapeo" />
-    <option name="LAST_COMMIT_MESSAGE" value="mapeo" />
+    <MESSAGE value="fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
 </project>

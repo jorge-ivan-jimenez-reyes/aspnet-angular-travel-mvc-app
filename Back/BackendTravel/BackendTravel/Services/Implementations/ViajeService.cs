@@ -30,7 +30,7 @@ namespace BackendTravel.Services.Implementations
             return _mapper.Map<ViajeDTOs>(viaje);
         }
 
-        public async Task<ViajeDTOs> CreateViajeAsync(ViajeDto viajeDto)
+        public async Task<ViajeDTOs> CreateViajeAsync(ViajeDTOs viajeDto)
         {
             var viajeEntity = _mapper.Map<Viaje>(viajeDto);
             await _viajeRepository.AddAsync(viajeEntity);
