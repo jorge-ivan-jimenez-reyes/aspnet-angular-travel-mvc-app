@@ -8,11 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="interfaces">
-      <change afterPath="$PROJECT_DIR$/BackendTravel/Models/DTOs/ViajeDTOs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/Controllers/ViajesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Controllers/ViajesController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="repo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
-      <workItem from="1742756140629" duration="7690000" />
+      <workItem from="1742756140629" duration="7998000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -313,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742764317694</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="repo">
+      <option name="closed" value="true" />
+      <created>1742765888319</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1742765888319</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +344,7 @@
     <MESSAGE value="controller" />
     <MESSAGE value="viajes" />
     <MESSAGE value="interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="interfaces" />
+    <MESSAGE value="repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="repo" />
   </component>
 </project>
