@@ -1,0 +1,6 @@
+﻿services:
+  backendtravel:
+    image: backendtravel
+    build:
+      context: .
+      dockerfile: BackendTravel/Dockerfile
