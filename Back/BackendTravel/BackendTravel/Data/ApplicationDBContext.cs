@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-
+using BackendTravel.Models.Entities;
 namespace BackendTravel.Data;
 
 public class AppDbContext : DbContext
