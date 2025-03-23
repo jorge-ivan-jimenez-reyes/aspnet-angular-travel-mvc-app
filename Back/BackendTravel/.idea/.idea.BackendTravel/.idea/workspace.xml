@@ -8,7 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="entities">
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="connection">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendTravel/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackendTravel/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +26,7 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -146,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
-      <workItem from="1742756140629" duration="3693000" />
+      <workItem from="1742756140629" duration="4750000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -236,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742760043336</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="connection">
+      <option name="closed" value="true" />
+      <created>1742760372311</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742760372311</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +266,7 @@
     <MESSAGE value="clase" />
     <MESSAGE value="db context" />
     <MESSAGE value="entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="entities" />
+    <MESSAGE value="connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="connection" />
   </component>
 </project>
