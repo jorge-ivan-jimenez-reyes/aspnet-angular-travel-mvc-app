@@ -1,9 +1,10 @@
-
 using AutoMapper;
 using BackendTravel.Models.DTOs;
 using BackendTravel.Models.Entities;
 using BackendTravel.Repositories.Interfaces; 
 using BackendTravel.Services.Interfaces;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BackendTravel.Services.Implementations
 {
@@ -21,7 +22,7 @@ namespace BackendTravel.Services.Implementations
         public async Task<IEnumerable<ViajeDTOs>> GetAllViajesAsync()
         {
             var viajes = await _viajeRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<ViajeDTOs>>(viajes);
+            return _mapper.Map<IEnumerable<ViajeDto>>(viajes);
         }
 
         public async Task<ViajeDTOs> GetViajeByIdAsync(int id)
@@ -43,7 +44,7 @@ namespace BackendTravel.Services.Implementations
             if (viajeEntity == null) return false;
 
             _mapper.Map(viajeDto, viajeEntity);
-            _viajeRepository.Update(viajeEntity);
+            await _viajeRepository.UpdateAsync(viajeEntity);
             return true;
         }
 
@@ -52,7 +53,7 @@ namespace BackendTravel.Services.Implementations
             var viajeEntity = await _viajeRepository.GetByIdAsync(id);
             if (viajeEntity == null) return false;
 
-            _viajeRepository.Delete(viajeEntity);
+            await _viajeRepository.DeleteAsync(viajeEntity);
             return true;
         }
     }
