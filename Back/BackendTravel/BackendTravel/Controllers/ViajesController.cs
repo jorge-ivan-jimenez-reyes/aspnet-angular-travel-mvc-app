@@ -9,5 +9,6 @@ namespace BackendTravel.Controllers
     public class ViajesController : ControllerBase
     {
         
+        
     }
 }
