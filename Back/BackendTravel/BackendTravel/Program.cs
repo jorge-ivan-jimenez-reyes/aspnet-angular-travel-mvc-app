@@ -7,7 +7,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipelin.
+// Configure the HTTP request pipelin.e
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
