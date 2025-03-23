@@ -9,9 +9,9 @@ namespace BackendTravel.Repositories.Implementations
 {
     public class ViajeRepository : IViajeRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly AppDbContext _context;
 
-        public ViajeRepository(ApplicationDbContext context)
+        public ViajeRepository(AppDbContext context)
         {
             _context = context;
         }
