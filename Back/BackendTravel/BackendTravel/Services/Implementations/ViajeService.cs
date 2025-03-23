@@ -21,7 +21,7 @@ namespace BackendTravel.Services.Implementations
         public async Task<IEnumerable<ViajeDTOs>> GetAllViajesAsync()
         {
             var viajes = await _viajeRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<ViajeDto>>(viajes);
+            return _mapper.Map<IEnumerable<ViajeDTOs>>(viajes);
         }
 
         public async Task<ViajeDTOs> GetViajeByIdAsync(int id)
@@ -34,7 +34,7 @@ namespace BackendTravel.Services.Implementations
         {
             var viajeEntity = _mapper.Map<Viaje>(viajeDto);
             await _viajeRepository.AddAsync(viajeEntity);
-            return _mapper.Map<ViajeDto>(viajeEntity);
+            return _mapper.Map<ViajeDTOs>(viajeEntity);
         }
 
         public async Task<bool> UpdateViajeAsync(ViajeDTOs viajeDto)
