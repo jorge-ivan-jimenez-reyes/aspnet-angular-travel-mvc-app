@@ -1,6 +1,6 @@
 using BackendTravel.Models.Entities;
 using BackendTravel.Models.DTOs;
-using BackendTravel.Services;
+using BackendTravel.Services.Interfaces; 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,8 +21,6 @@ namespace BackendTravel.Controllers
 
         // GET: api/viajes
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<IEnumerable<ViajeDto>>> GetAll()
         {
             try
@@ -39,9 +37,6 @@ namespace BackendTravel.Controllers
 
         // GET: api/viajes/{id}
         [HttpGet("{id:int}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<ViajeDto>> GetById(int id)
         {
             try
@@ -61,9 +56,6 @@ namespace BackendTravel.Controllers
 
         // POST: api/viajes
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<ViajeDto>> Post([FromBody] ViajeDto viajeDto)
         {
             try
@@ -72,8 +64,6 @@ namespace BackendTravel.Controllers
                     return BadRequest(ModelState);
 
                 var nuevoViaje = await _viajeService.CreateViajeAsync(viajeDto);
-
-                // Devuelve 201 Created, indicando la ubicación del nuevo recurso
                 return CreatedAtAction(nameof(GetById), new { id = nuevoViaje.Id }, nuevoViaje);
             }
             catch (Exception ex)
@@ -85,10 +75,6 @@ namespace BackendTravel.Controllers
 
         // PUT: api/viajes/{id}
         [HttpPut("{id:int}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Put(int id, [FromBody] ViajeDto viajeDto)
         {
             try
@@ -100,7 +86,7 @@ namespace BackendTravel.Controllers
                 if (!actualizado)
                     return NotFound("No se encontró el viaje a actualizar.");
 
-                return NoContent(); // 204, sin contenido
+                return NoContent();
             }
             catch (Exception ex)
             {
@@ -111,9 +97,6 @@ namespace BackendTravel.Controllers
 
         // DELETE: api/viajes/{id}
         [HttpDelete("{id:int}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
             try
