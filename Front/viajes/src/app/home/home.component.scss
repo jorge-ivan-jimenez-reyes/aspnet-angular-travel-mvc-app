@@ -1,3 +1,19 @@
+:root {
+  --color-primary: #1A4C7B;        /* Azul principal */
+  --color-primary-light: #336b9c;  /* Azul más claro para hover */
+  --color-surface: #ffffff;        /* Tarjetas blancas */
+  --color-background: #f8fafc;     /* Fondo muy claro */
+  --color-muted: #f0f4f8;          /* Fondos secundarios */
+  --color-border: #dbe3ec;         /* Bordes suaves */
+  --color-text-primary: #1A4C7B;   /* Texto principal (azul principal) */
+  --color-text-secondary: #5a7897; /* Texto secundario, más suave */
+  --color-button-primary: #1976d2; /* Azul PrimeNG */
+  --color-button-hover: #1565c0;   /* Azul más oscuro para hover */
+  --color-success: #27ae60;
+  --color-warning: #f2994a;
+  --color-error: #eb5757;
+}
+
 .home-container {
   display: flex;
   justify-content: center;
@@ -44,6 +60,7 @@
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
       &:hover {
         background-color: var(--color-button-hover);
