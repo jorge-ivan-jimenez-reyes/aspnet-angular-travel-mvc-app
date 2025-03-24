@@ -1,92 +1,119 @@
-<div class="viajes-container">
+<div class="viajes-container mat-elevation-z8">
   <h2>Gestión de Viajes</h2>
 
   <form [formGroup]="form" (ngSubmit)="guardar()" class="viaje-form">
     <input formControlName="id" type="hidden" />
 
-    <div class="form-group">
-      <label for="nombre">Nombre:</label>
-      <input id="nombre" formControlName="nombre" type="text" />
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" type="text" />
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="fechaInicio">Fecha Inicio:</label>
-      <input id="fechaInicio" formControlName="fechaInicio" type="datetime-local" />
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Inicio</mat-label>
+      <input matInput formControlName="fechaInicio" [matDatepicker]="pickerInicio" />
+      <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+      <mat-datepicker #pickerInicio></mat-datepicker>
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="fechaFin">Fecha Fin:</label>
-      <input id="fechaFin" formControlName="fechaFin" type="datetime-local" />
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Fin</mat-label>
+      <input matInput formControlName="fechaFin" [matDatepicker]="pickerFin" />
+      <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+      <mat-datepicker #pickerFin></mat-datepicker>
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="origenId">Origen:</label>
-      <select id="origenId" formControlName="origenId">
-        <option *ngFor="let lugar of lugares" [value]="lugar.id">{{ lugar.nombre }}</option>
-      </select>
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Origen</mat-label>
+      <mat-select formControlName="origenId">
+        <mat-option *ngFor="let lugar of lugares" [value]="lugar.id">{{ lugar.nombre }}</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="destinoId">Destino:</label>
-      <select id="destinoId" formControlName="destinoId">
-        <option *ngFor="let lugar of lugares" [value]="lugar.id">{{ lugar.nombre }}</option>
-      </select>
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Destino</mat-label>
+      <mat-select formControlName="destinoId">
+        <mat-option *ngFor="let lugar of lugares" [value]="lugar.id">{{ lugar.nombre }}</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="transporteId">Transporte:</label>
-      <select id="transporteId" formControlName="transporteId">
-        <option *ngFor="let t of transportes" [value]="t.id">{{ t.nombre }}</option>
-      </select>
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Transporte</mat-label>
+      <mat-select formControlName="transporteId">
+        <mat-option *ngFor="let t of transportes" [value]="t.id">{{ t.nombre }}</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="estatusId">Estatus:</label>
-      <select id="estatusId" formControlName="estatusId">
-        <option *ngFor="let e of estatuses" [value]="e.id">{{ e.nombre }}</option>
-      </select>
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Estatus</mat-label>
+      <mat-select formControlName="estatusId">
+        <mat-option *ngFor="let e of estatuses" [value]="e.id">{{ e.nombre }}</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="costo">Costo:</label>
-      <input id="costo" formControlName="costo" type="number" step="0.01" />
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Costo</mat-label>
+      <input matInput formControlName="costo" type="number" step="0.01" />
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" formControlName="descripcion" rows="3"></textarea>
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="descripcion" rows="3"></textarea>
+    </mat-form-field>
 
     <div class="form-actions">
-      <button type="submit">{{ modoEditar ? 'Actualizar' : 'Crear' }}</button>
-      <button type="button" (click)="resetFormulario()">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit">{{ modoEditar ? 'Actualizar' : 'Crear' }}</button>
+      <button mat-button (click)="resetFormulario()">Cancelar</button>
     </div>
   </form>
 
   <h3>Viajes Registrados</h3>
-  <table class="viajes-table">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Fechas</th>
-        <th>Origen</th>
-        <th>Destino</th>
-        <th>Costo</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let viaje of viajes">
-        <td>{{ viaje.nombre }}</td>
-        <td>{{ viaje.fechaInicio | date:'short' }} - {{ viaje.fechaFin | date:'short' }}</td>
-        <td>{{ getNombreLugar(viaje.origenId) }}</td>
-        <td>{{ getNombreLugar(viaje.destinoId) }}</td>
-        <td>${{ viaje.costo }}</td>
-        <td>
-          <button (click)="editar(viaje)" class="edit-btn">✏️</button>
-          <button (click)="eliminar(viaje.id)" class="delete-btn">🗑️</button>
-        </td>
-      </tr>
-    </tbody>
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+      <td mat-cell *matCellDef="let viaje">{{ viaje.nombre }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="fechaInicio">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Inicio</th>
+      <td mat-cell *matCellDef="let viaje">{{ viaje.fechaInicio | date:'short' }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="fechaFin">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Fin</th>
+      <td mat-cell *matCellDef="let viaje">{{ viaje.fechaFin | date:'short' }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="origen">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Origen</th>
+      <td mat-cell *matCellDef="let viaje">{{ getNombreLugar(viaje.origenId) }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="destino">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Destino</th>
+      <td mat-cell *matCellDef="let viaje">{{ getNombreLugar(viaje.destinoId) }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="costo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Costo</th>
+      <td mat-cell *matCellDef="let viaje">${{ viaje.costo }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let viaje">
+        <button mat-icon-button color="primary" (click)="editar(viaje)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="eliminar(viaje.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>
