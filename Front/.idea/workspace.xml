@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="Refactor styles in viaje-form and viaje-list components for improved readability and maintainability">
+    <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="Update asset paths in angular.json and home.component.html for improved resource management; adjust workspace.xml for recent changes">
+      <change afterPath="$PROJECT_DIR$/viajes/public/assets/images/logolis.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/BackendTravel/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/BackendTravel/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viajes/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/assets/images/LIS-logo-final-300x151.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,7 @@
       <workItem from="1742777709902" duration="528000" />
       <workItem from="1742778251441" duration="2169000" />
       <workItem from="1742798686585" duration="2528000" />
-      <workItem from="1742843221565" duration="1462000" />
+      <workItem from="1742843221565" duration="1905000" />
     </task>
     <task id="LOCAL-00001" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
       <option name="closed" value="true" />
@@ -253,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742831808511</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update asset paths in angular.json and home.component.html for improved resource management; adjust workspace.xml for recent changes">
+      <option name="closed" value="true" />
+      <created>1742844716300</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742844716300</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +270,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update workspace configuration to enhance DbContext with sensitive data logging and console output" />
     <MESSAGE value="Refactor styles in viaje-form and viaje-list components for improved readability and maintainability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor styles in viaje-form and viaje-list components for improved readability and maintainability" />
+    <MESSAGE value="Update asset paths in angular.json and home.component.html for improved resource management; adjust workspace.xml for recent changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update asset paths in angular.json and home.component.html for improved resource management; adjust workspace.xml for recent changes" />
   </component>
 </project>

@@ -9,16 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/ref/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/ref/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/refint/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/refint/BackendTravel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/viajes/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/viajes/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/viajes/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/viajes/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/viajes/src/assets/images/LIS-logo-final-300x151.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +153,7 @@
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
       <workItem from="1742756140629" duration="14410000" />
-      <workItem from="1742775495080" duration="15760000" />
+      <workItem from="1742775495080" duration="16483000" />
     </task>
     <task id="LOCAL-00014" summary="Transporte.cs">
       <option name="closed" value="true" />
