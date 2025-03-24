@@ -1,36 +1,65 @@
+/* VARIABLES DE COLOR - PALETA */
 :root {
-  --color-background: #f4f7fc;       // Fondo suave pastel
-  --color-surface: #ffffff;          // Tarjetas blancas
-  --color-text-primary: #2c3e50;     // Texto principal oscuro
-  --color-text-secondary: #555f77;   // Subtítulo gris azulado
-  --color-button-primary: #1976d2;   // Azul PrimeNG
-  --color-button-hover: #1565c0;     // Azul más oscuro
+  --color-primary: #1A4C7B;        /* Azul principal */
+  --color-primary-light: #336b9c;  /* Azul para hover y fondos suaves */
+  --color-surface: #ffffff;        /* Tarjetas y superficies blancas */
+  --color-background: #f8fafc;     /* Fondo general muy claro */
+  --color-muted: #f0f4f8;          /* Fondos secundarios */
+  --color-border: #dbe3ec;         /* Bordes sutiles */
+  --color-text-primary: #1A4C7B;   /* Texto principal (usando el azul principal) */
+  --color-text-secondary: #5a7897; /* Texto secundario */
+
+  /* Opcionales semánticos */
+  --color-success: #27ae60;
+  --color-warning: #f2994a;
+  --color-error: #eb5757;
 }
 
-
-/* BASE GENERAL */
-body {
+/* RESET Y ESTILOS BASE */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Inter', 'Roboto', sans-serif;
   background-color: var(--color-background);
   color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--color-primary);
+  color: var(--color-primary-light);
 }
 
-/* PRIMENG COMPONENTES */
-.p-component {
-  color: var(--color-text-primary);
+/* BOTONES */
+button,
+.p-button {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
 }
 
+button:hover,
+.p-button:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
+/* TARJETAS - PrimeNG */
 .p-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -38,90 +67,116 @@ a:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
-.p-button {
-  background-color: var(--color-primary);
-  border: 1px solid var(--color-primary);
-  color: #fff;
-  font-weight: 500;
-
-  &:hover {
-    background-color: var(--color-accent);
-    border-color: var(--color-accent);
-  }
-
-  &.p-button-secondary {
-    background-color: var(--color-muted);
-    border-color: var(--color-muted);
-    color: var(--color-text-primary);
-  }
-}
-
-.p-datatable {
-  .p-datatable-header {
-    background-color: var(--color-surface);
-    border-color: var(--color-border);
-  }
-
-  .p-datatable-thead > tr > th {
-    background-color: var(--color-muted);
-    color: var(--color-text-primary);
-    border-color: var(--color-border);
-  }
-
-  .p-datatable-tbody > tr {
-    background-color: var(--color-background);
-
-    &:nth-child(even) {
-      background-color: #fcfcfc;
-    }
-
-    &:hover {
-      background-color: #f2f6f8;
-    }
-
-    > td {
-      border-color: var(--color-border);
-    }
-  }
-}
-
+/* INPUTS Y CONTROLES */
 .p-inputtext,
 .p-dropdown,
 .p-multiselect {
-  background-color: var(--color-background);
+  background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   color: var(--color-text-primary);
   border-radius: 4px;
-
-  &:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 2px rgba(60, 110, 113, 0.15);
-  }
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.p-inputtext:focus,
+.p-dropdown:focus,
+.p-multiselect:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(26, 76, 123, 0.15);
+}
+
+/* TABLAS - PrimeNG */
+.p-datatable {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.p-datatable-header {
+  background-color: var(--color-surface);
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.p-datatable-thead > tr > th {
+  background-color: var(--color-muted);
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.p-datatable-tbody > tr {
+  background-color: var(--color-surface);
+  transition: background-color 0.3s ease;
+}
+
+.p-datatable-tbody > tr:nth-child(even) {
+  background-color: #fcfcfc;
+}
+
+.p-datatable-tbody > tr:hover {
+  background-color: #f1f5f9;
+}
+
+.p-datatable-tbody > tr > td {
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* PAGINACIÓN */
+.p-paginator {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 0.75rem 1rem;
+  color: var(--color-text-primary);
+}
+
+/* ETIQUETAS (TAGS) */
 .p-tag {
   font-weight: 500;
   border-radius: 4px;
-  padding: 0.25rem 0.6rem;
-
-  &.p-tag-success {
-    background-color: var(--color-success);
-    color: white;
-  }
-
-  &.p-tag-warning {
-    background-color: var(--color-warning);
-    color: white;
-  }
-
-  &.p-tag-danger {
-    background-color: var(--color-error);
-    color: white;
-  }
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  color: #fff;
 }
 
-.p-paginator {
-  background-color: var(--color-surface);
-  border-color: var(--color-border);
+.p-tag-success {
+  background-color: var(--color-success);
+}
+
+.p-tag-warning {
+  background-color: var(--color-warning);
+}
+
+.p-tag-danger {
+  background-color: var(--color-error);
+}
+
+/* ICONOS Y BOTONES DENTRO DE TABLAS */
+.p-icon-button,
+.p-button.p-button-text {
+  color: var(--color-button-primary);
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.p-icon-button:hover,
+.p-button.p-button-text:hover {
+  color: var(--color-button-hover);
+}
+
+/* SCROLL RESPONSIVE PARA TABLAS */
+.p-datatable-scrollable .p-datatable-wrapper {
+  overflow-x: auto;
 }
