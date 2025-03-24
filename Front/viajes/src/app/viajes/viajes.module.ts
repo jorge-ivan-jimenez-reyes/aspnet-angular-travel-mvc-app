@@ -13,6 +13,8 @@ import { ToastModule } from 'primeng/toast';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ToolbarModule } from 'primeng/toolbar';
 import { CardModule } from 'primeng/card';
+import { TagModule } from 'primeng/tag';
+import { TooltipModule } from 'primeng/tooltip';
 
 import { ViajesRoutingModule } from './viajes-routing.module';
 import { ViajesComponent } from './components/viajes/viajes.component';
@@ -42,7 +44,9 @@ import { CatalogoService } from './services/catalogo.service';
     ToastModule,
     ConfirmDialogModule,
     ToolbarModule,
-    CardModule
+    CardModule,
+    TagModule,
+    TooltipModule
   ],
   providers: [
     ViajeService,

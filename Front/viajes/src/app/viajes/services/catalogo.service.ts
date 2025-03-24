@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Lugar } from '../models/lugar.model';
 import { EstatusViaje } from '../models/estatus-viaje.model';
 import { Transporte } from '../models/transporte.model';
@@ -23,5 +23,14 @@ export class CatalogoService {
 
   getTransportes(): Observable<Transporte[]> {
     return this.http.get<Transporte[]>(`${this.apiUrl}/transportes`);
+  }
+
+  getEstatusNombre(estatusId: number): Observable<string> {
+    return this.getEstatusViajes().pipe(
+      map((estatusViajes: EstatusViaje[]) => {
+        const estatus = estatusViajes.find((e: EstatusViaje) => e.id === estatusId);
+        return estatus ? estatus.nombre : 'Desconocido';
+      })
+    );
   }
 }

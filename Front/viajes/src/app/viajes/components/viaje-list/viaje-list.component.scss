@@ -1,86 +1,10 @@
-.viaje-list-container {
-  padding: 2rem;
-  background-color: var(--color-background); // #ffffff
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+:host ::ng-deep {
+    .p-progressbar {
+        height: .5rem;
+        background-color: #D8DADC;
 
-  h2 {
-    margin-bottom: 1.5rem;
-    color: var(--color-primary); // #3c6e71
-    font-weight: 600;
-    font-size: 1.75rem;
-  }
-
-  button {
-    margin-bottom: 1.5rem;
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, filter 0.2s ease;
-
-    &:hover {
-      filter: brightness(0.95);
-    }
-  }
-
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 0.75rem;
-
-    thead {
-      th {
-        background-color: var(--color-accent); // #284b63
-        color: #fff;
-        padding: 0.75rem 1rem;
-        text-align: left;
-        font-weight: 600;
-        font-size: 0.95rem;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-      }
-    }
-
-    tbody {
-      tr {
-        background-color: var(--color-surface, #f8f9fa); // fallback gris muy claro
-        border-radius: 6px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        transition: box-shadow 0.3s ease;
-
-        &:hover {
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        .p-progressbar-value {
+            background-color: #607D8B;
         }
-
-        td {
-          padding: 0.75rem 1rem;
-          font-size: 0.95rem;
-          color: var(--color-text-primary); // #353535
-          vertical-align: middle;
-        }
-      }
     }
-  }
-
-  .mat-column-acciones {
-    width: 120px;
-    text-align: center;
-  }
-
-  .mat-icon-button {
-    margin: 0 0.25rem;
-    color: var(--color-accent); // azul oscuro
-    font-size: 1.25rem;
-    border-radius: 50%;
-    transition: background-color 0.2s ease;
-
-    &:hover {
-      background-color: rgba(60, 110, 113, 0.1); // suave fondo al hover
-    }
-  }
 }
