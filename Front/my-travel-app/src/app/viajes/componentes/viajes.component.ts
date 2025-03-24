@@ -144,12 +144,18 @@ export class ViajesComponent implements OnInit, AfterViewInit {
     return lugar ? lugar.nombre : '';
   }
 
+  getNombreTransporte(id: number): string {
+    const transporte = this.transportes.find(t => t.id === id);
+    return transporte ? transporte.nombre : '';
+  }
+
+  getNombreEstatus(id: number): string {
+    const estatus = this.estatuses.find(e => e.id === id);
+    return estatus ? estatus.nombre : '';
+  }
+
   resetFormulario(): void {
     this.form.reset();
     this.modoEditar = false;
   }
-
-
-
-
 }
