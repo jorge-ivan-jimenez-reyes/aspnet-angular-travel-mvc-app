@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Viaje } from '../../models/viaje.model';
+import { ViajeService } from '../../services/viaje.service';
 
 @Component({
   selector: 'app-viaje-list',
@@ -10,10 +11,22 @@ import { Viaje } from '../../models/viaje.model';
 export class ViajeListComponent implements OnInit {
   viajes: Viaje[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private viajeService: ViajeService) {}
 
   ngOnInit(): void {
-    // TODO: Fetch viajes from a service
+    this.loadViajes();
+  }
+
+  loadViajes(): void {
+    this.viajeService.getViajes().subscribe(
+      (viajes) => {
+        this.viajes = viajes;
+      },
+      (error) => {
+        console.error('Error fetching viajes:', error);
+        // TODO: Add error handling (e.g., show error message to user)
+      }
+    );
   }
 
   onNewViaje(): void {
@@ -25,7 +38,20 @@ export class ViajeListComponent implements OnInit {
   }
 
   onDeleteViaje(viaje: Viaje): void {
-    // TODO: Implement delete functionality
-    console.log('Delete viaje:', viaje);
+    if (viaje.id === undefined) {
+      console.error('Cannot delete viaje: id is undefined');
+      return;
+    }
+    if (confirm(`Are you sure you want to delete the viaje to ${viaje.destino}?`)) {
+      this.viajeService.deleteViaje(viaje.id).subscribe(
+        () => {
+          this.loadViajes(); // Reload the list after deletion
+        },
+        (error) => {
+          console.error('Error deleting viaje:', error);
+          // TODO: Add error handling (e.g., show error message to user)
+        }
+      );
+    }
   }
 }
