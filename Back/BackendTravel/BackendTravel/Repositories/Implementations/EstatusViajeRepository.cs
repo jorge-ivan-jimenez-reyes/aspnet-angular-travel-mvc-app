@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BackendTravel.Repositories.Implementations;
 
-public class EstatusViajeRepository
+public class EstatusViajeRepository : IEstatusViajeRepository
 {
     private readonly AppDbContext _context;
 
