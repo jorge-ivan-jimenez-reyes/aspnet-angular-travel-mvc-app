@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Update assembly informational version and refactor repository context">
-      <change beforePath="$PROJECT_DIR$/BackendTravel/Repositories/Interfaces/ITransporteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Repositories/Interfaces/ITransporteRepository.cs" afterDir="false" />
-    </list>
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="B" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,39 +148,7 @@
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
       <workItem from="1742756140629" duration="14410000" />
-      <workItem from="1742775495080" duration="310000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <option name="closed" value="true" />
-      <created>1742754657706</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1742754657706</updated>
-    </task>
-    <task id="LOCAL-00002" summary="commit swagger">
-      <option name="closed" value="true" />
-      <created>1742755679254</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1742755679254</updated>
-    </task>
-    <task id="LOCAL-00003" summary="pipe">
-      <option name="closed" value="true" />
-      <created>1742755743195</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1742755743195</updated>
-    </task>
-    <task id="LOCAL-00004" summary="ls">
-      <option name="closed" value="true" />
-      <created>1742756642600</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742756642600</updated>
+      <workItem from="1742775495080" duration="627000" />
     </task>
     <task id="LOCAL-00005" summary="viaje">
       <option name="closed" value="true" />
@@ -544,7 +510,39 @@
       <option name="project" value="LOCAL" />
       <updated>1742775800540</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Implement GetAllAsync method in TransporteRepository">
+      <option name="closed" value="true" />
+      <created>1742775939499</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1742775939499</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Add GetAllAsync method to IEstatusViajeRepository interface">
+      <option name="closed" value="true" />
+      <created>1742775982010</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1742775982010</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Implement GetAllAsync method in EstatusViajeRepository">
+      <option name="closed" value="true" />
+      <created>1742776048739</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1742776048739</updated>
+    </task>
+    <task id="LOCAL-00053" summary="B">
+      <option name="closed" value="true" />
+      <created>1742776102211</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1742776102211</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,11 +552,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="connection" />
-    <MESSAGE value="clases" />
-    <MESSAGE value="Transporte.cs" />
-    <MESSAGE value="dbinitial" />
-    <MESSAGE value="remove" />
     <MESSAGE value="controller" />
     <MESSAGE value="interfaces" />
     <MESSAGE value="repo" />
@@ -579,6 +572,11 @@
     <MESSAGE value="i" />
     <MESSAGE value="b" />
     <MESSAGE value="Update assembly informational version and refactor repository context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update assembly informational version and refactor repository context" />
+    <MESSAGE value="Add GetAllAsync method to ITransporteRepository interface" />
+    <MESSAGE value="Implement GetAllAsync method in TransporteRepository" />
+    <MESSAGE value="Add GetAllAsync method to IEstatusViajeRepository interface" />
+    <MESSAGE value="Implement GetAllAsync method in EstatusViajeRepository" />
+    <MESSAGE value="B" />
+    <option name="LAST_COMMIT_MESSAGE" value="B" />
   </component>
 </project>
