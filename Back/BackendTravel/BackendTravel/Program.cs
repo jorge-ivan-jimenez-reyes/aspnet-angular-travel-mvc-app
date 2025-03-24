@@ -19,6 +19,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IViajeRepository, ViajeRepository>();
 builder.Services.AddScoped<IViajeService, ViajeService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddScoped<ILugarRepository, LugarRepository>();
+builder.Services.AddScoped<ITransporteRepository, TransporteRepository>();
+builder.Services.AddScoped<IEstatusViajeRepository, EstatusViajeRepository>();
 
 var app = builder.Build();
 
