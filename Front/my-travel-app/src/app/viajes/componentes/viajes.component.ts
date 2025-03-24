@@ -7,14 +7,13 @@ import { Transporte } from '../modelos/transporte.model';
 import { EstatusViaje } from '../modelos/estatus-viaje.model';
 import { ViajeService } from '../servicios/viaje.service';
 import { CatalogoService } from '../servicios/catalogo.service';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-viajes',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: 'viajes.component.html',
-  styleUrls: ['viajes.component.scss']
+  styleUrl: './viajes.component.scss'
 })
 export class ViajesComponent implements OnInit {
   viajes: Viaje[] = [];
@@ -55,7 +54,10 @@ export class ViajesComponent implements OnInit {
   }
 
   guardar(): void {
-    const viaje = this.form.value as Viaje;
+    if (this.form.invalid) {
+      return;
+    }
+    const viaje: Viaje = this.form.value;
     if (this.modoEditar) {
       this.viajeService.updateViaje(viaje.id, viaje).subscribe(() => {
         this.resetFormulario();

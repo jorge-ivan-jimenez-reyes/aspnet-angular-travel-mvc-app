@@ -8,7 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Enhance DbContext configuration with sensitive data logging and logging to console" />
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <change beforePath="$PROJECT_DIR$/../../Front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/my-travel-app/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/my-travel-app/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/my-travel-app/src/app/viajes/componentes/viajes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/my-travel-app/src/app/viajes/componentes/viajes.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +26,7 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Back/BackendTravel/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -147,15 +152,7 @@
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
       <workItem from="1742756140629" duration="14410000" />
-      <workItem from="1742775495080" duration="2627000" />
-    </task>
-    <task id="LOCAL-00013" summary="clases">
-      <option name="closed" value="true" />
-      <created>1742762748699</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1742762748699</updated>
+      <workItem from="1742775495080" duration="3511000" />
     </task>
     <task id="LOCAL-00014" summary="Transporte.cs">
       <option name="closed" value="true" />
@@ -541,7 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742777438423</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778588938</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778588938</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +556,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="d" />
     <MESSAGE value="mapeo" />
     <MESSAGE value="fixin" />
     <MESSAGE value="bugs" />
@@ -576,6 +580,7 @@
     <MESSAGE value="Add seed data for EstatusViaje, Lugar, and Transporte entities" />
     <MESSAGE value="Add migration to seed data for EstatusViaje, Lugar, and Transporte entities" />
     <MESSAGE value="Enhance DbContext configuration with sensitive data logging and logging to console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhance DbContext configuration with sensitive data logging and logging to console" />
+    <MESSAGE value="Update workspace configuration to enhance DbContext with sensitive data logging and console output" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace configuration to enhance DbContext with sensitive data logging and console output" />
   </component>
 </project>
