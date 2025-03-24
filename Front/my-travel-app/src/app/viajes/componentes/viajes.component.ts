@@ -1,6 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule, MatTableDataSource } from '@angular/material/table';
+import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
+import { MatSortModule, MatSort } from '@angular/material/sort';
 import { Viaje } from '../modelos/viaje.model';
 import { Lugar } from '../modelos/lugar.model';
 import { Transporte } from '../modelos/transporte.model';
@@ -11,11 +20,28 @@ import { CatalogoService } from '../servicios/catalogo.service';
 @Component({
   selector: 'app-viajes',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
+  ],
   templateUrl: 'viajes.component.html',
   styleUrl: './viajes.component.scss'
 })
 export class ViajesComponent implements OnInit {
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  displayedColumns: string[] = ['id', 'nombre', 'fechaInicio', 'fechaFin', 'origen', 'destino', 'transporte', 'estatus', 'costo', 'acciones'];
+  dataSource!: MatTableDataSource<Viaje>;
   viajes: Viaje[] = [];
   lugares: Lugar[] = [];
   transportes: Transporte[] = [];
