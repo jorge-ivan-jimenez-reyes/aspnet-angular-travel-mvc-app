@@ -2,7 +2,7 @@
   .viaje-list-container {
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     padding: 1rem;
   }
 
@@ -15,44 +15,44 @@
   .p-datatable {
     .p-datatable-header {
       background-color: #ffffff;
-      border-color: #e0e0e0;
+      border-color: #f0f0f0;
     }
 
     .p-datatable-thead > tr > th {
-      background-color: #ffffff;
-      color: #333333;
-      border-color: #e0e0e0;
+      background-color: #f8f9fa;
+      color: #495057;
+      border-color: #f0f0f0;
     }
 
     .p-datatable-tbody > tr {
       background-color: #ffffff;
 
       &:nth-child(even) {
-        background-color: #ffffff;
+        background-color: #fcfcfc;
       }
 
       > td {
-        border-color: #e0e0e0;
+        border-color: #f0f0f0;
       }
     }
   }
 
   .p-inputtext {
     background-color: #ffffff;
-    border-color: #e0e0e0;
-    color: #333333;
+    border-color: #ced4da;
+    color: #495057;
 
     &:enabled:focus {
-      box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
   }
 
   .p-dropdown {
     background-color: #ffffff;
-    border-color: #e0e0e0;
+    border-color: #ced4da;
 
     .p-dropdown-label {
-      color: #333333;
+      color: #495057;
     }
 
     .p-dropdown-trigger {
@@ -70,5 +70,30 @@
   .p-tag {
     border-radius: 4px;
     padding: 0.25rem 0.5rem;
+  }
+
+  .p-paginator {
+    background-color: #ffffff;
+    color: #6c757d;
+
+    .p-paginator-pages .p-paginator-page {
+      color: #6c757d;
+
+      &.p-highlight {
+        background-color: #e9ecef;
+        color: #495057;
+      }
+    }
+
+    .p-paginator-first,
+    .p-paginator-prev,
+    .p-paginator-next,
+    .p-paginator-last {
+      color: #6c757d;
+
+      &:not(.p-disabled):not(.p-highlight):hover {
+        background-color: #e9ecef;
+      }
+    }
   }
 }
