@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatSortModule, MatSort } from '@angular/material/sort';
+import { MatIconModule } from '@angular/material/icon';
 import { Viaje } from '../modelos/viaje.model';
 import { Lugar } from '../modelos/lugar.model';
 import { Transporte } from '../modelos/transporte.model';
@@ -31,12 +32,13 @@ import { CatalogoService } from '../servicios/catalogo.service';
     MatButtonModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatIconModule
   ],
   templateUrl: 'viajes.component.html',
   styleUrl: './viajes.component.scss'
 })
-export class ViajesComponent implements OnInit {
+export class ViajesComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -57,7 +59,11 @@ export class ViajesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.initForm();
     this.cargarDatos();
+  }
+
+  initForm(): void {
     this.form = this.fb.group({
       id: [0],
       nombre: ['', Validators.required],
@@ -73,10 +79,22 @@ export class ViajesComponent implements OnInit {
   }
 
   cargarDatos(): void {
-    this.viajeService.getViajes().subscribe(v => this.viajes = v);
+    this.viajeService.getViajes().subscribe(viajes => {
+      this.viajes = viajes;
+      this.dataSource = new MatTableDataSource(this.viajes);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
     this.catalogoService.getLugares().subscribe(l => this.lugares = l);
     this.catalogoService.getTransportes().subscribe(t => this.transportes = t);
     this.catalogoService.getEstatuses().subscribe(e => this.estatuses = e);
+  }
+
+  ngAfterViewInit() {
+    if (this.dataSource) {
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    }
   }
 
   guardar(): void {
@@ -88,12 +106,22 @@ export class ViajesComponent implements OnInit {
       this.viajeService.updateViaje(viaje.id, viaje).subscribe(() => {
         this.resetFormulario();
         this.cargarDatos();
+        this.actualizarTabla();
       });
     } else {
       this.viajeService.createViaje(viaje).subscribe(() => {
         this.resetFormulario();
         this.cargarDatos();
+        this.actualizarTabla();
       });
+    }
+  }
+
+  actualizarTabla(): void {
+    if (this.dataSource) {
+      this.dataSource.data = this.viajes;
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     }
   }
 
@@ -106,6 +134,7 @@ export class ViajesComponent implements OnInit {
     if (confirm('¿Eliminar este viaje?')) {
       this.viajeService.deleteViaje(id).subscribe(() => {
         this.cargarDatos();
+        this.actualizarTabla();
       });
     }
   }
