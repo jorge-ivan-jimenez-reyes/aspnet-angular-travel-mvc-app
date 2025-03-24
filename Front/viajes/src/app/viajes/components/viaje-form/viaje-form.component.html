@@ -1,7 +1,68 @@
 <div class="viaje-form-container">
-  <h2>{{ isEditing ? 'Editar Viaje' : 'Nuevo Viaje' }}</h2>
+  <h2>{{ isEditing ? 'Editar' : 'Nuevo' }} Viaje</h2>
   <form [formGroup]="viajeForm" (ngSubmit)="onSubmit()">
-    <!-- Add form fields here -->
-    <button type="submit" [disabled]="viajeForm.invalid">Guardar</button>
+    <mat-form-field appearance="fill">
+      <mat-label>Destino</mat-label>
+      <input matInput formControlName="destino" required>
+      <mat-error *ngIf="viajeForm.get('destino')?.hasError('required')">El destino es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de Inicio</mat-label>
+      <input matInput [matDatepicker]="pickerInicio" formControlName="fechaInicio" required>
+      <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+      <mat-datepicker #pickerInicio></mat-datepicker>
+      <mat-error *ngIf="viajeForm.get('fechaInicio')?.hasError('required')">La fecha de inicio es requerida</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de Fin</mat-label>
+      <input matInput [matDatepicker]="pickerFin" formControlName="fechaFin" required>
+      <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+      <mat-datepicker #pickerFin></mat-datepicker>
+      <mat-error *ngIf="viajeForm.get('fechaFin')?.hasError('required')">La fecha de fin es requerida</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Presupuesto</mat-label>
+      <input matInput type="number" formControlName="presupuesto" required>
+      <mat-error *ngIf="viajeForm.get('presupuesto')?.hasError('required')">El presupuesto es requerido</mat-error>
+      <mat-error *ngIf="viajeForm.get('presupuesto')?.hasError('min')">El presupuesto debe ser mayor o igual a 0</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Lugar</mat-label>
+      <mat-select formControlName="lugarId" required>
+        <mat-option *ngFor="let lugar of lugares" [value]="lugar.id">
+          {{ lugar.nombre }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="viajeForm.get('lugarId')?.hasError('required')">El lugar es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Estatus</mat-label>
+      <mat-select formControlName="estatusId" required>
+        <mat-option *ngFor="let estatus of estatusViajes" [value]="estatus.id">
+          {{ estatus.nombre }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="viajeForm.get('estatusId')?.hasError('required')">El estatus es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Transporte</mat-label>
+      <mat-select formControlName="transporteId" required>
+        <mat-option *ngFor="let transporte of transportes" [value]="transporte.id">
+          {{ transporte.nombre }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="viajeForm.get('transporteId')?.hasError('required')">El transporte es requerido</mat-error>
+    </mat-form-field>
+
+    <div class="form-actions">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!viajeForm.valid">Guardar</button>
+      <button mat-button type="button" (click)="router.navigate(['/viajes'])">Cancelar</button>
+    </div>
   </form>
 </div>
