@@ -1,55 +1,6 @@
-@use 'custom-theme'; // 👈 debe ir primero
-@use '@angular/material' as mat;
-
-// Variables globales
-$color-secondary: #F5F7FA;
-$color-success: #27AE60;
-$color-warning: #F2994A;
-$color-error: #6f3e3e;
-$color-text-primary: #2C3E50;
-$color-background: #FFFFFF;
-
-$font-family: 'Inter', 'Roboto', sans-serif;
-
-:root {
-  --color-secondary: #{$color-secondary};
-  --color-success: #{$color-success};
-  --color-warning: #{$color-warning};
-  --color-error: #{$color-error};
-  --color-text-primary: #{$color-text-primary};
-  --color-background: #{$color-background};
-}
-
+@use 'custom-theme';
 body {
-  font-family: $font-family;
-  color: var(--color-text-primary);
-  background-color: var(--color-background);
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  height: 100%;
-}
-
-html {
-  height: 100%;
-}
-
-// Botones personalizados
-.mat-mdc-raised-button.mat-primary {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-.mat-mdc-raised-button.mat-accent {
-  background-color: var(--color-accent);
-  color: black;
-}
-
-// Clases utilitarias
-.success {
-  color: var(--color-success);
-}
-.warning {
-  color: var(--color-warning);
-}
-.error {
-  color: var(--color-error);
+  background-color: #FFFFFF;
 }

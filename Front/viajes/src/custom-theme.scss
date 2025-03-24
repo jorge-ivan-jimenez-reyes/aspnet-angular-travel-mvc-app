@@ -1,28 +1,16 @@
 @use '@angular/material' as mat;
+@include mat.core();
 
-$color-primary: #005792;
-$color-accent: #FFCC00;
-$font-family: 'Inter', 'Roboto', sans-serif;
+$myapp-theme-primary: mat.m2-define-palette(mat.$m2-indigo-palette, A400, A100, A700);
+$myapp-theme-accent: mat.m2-define-palette(mat.$m2-indigo-palette);
+$myapp-theme-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
-$my-primary: mat.define-palette((
-  500: $color-primary,
-  contrast: (
-    500: white,
-  )
-));
-$my-accent: mat.define-palette((
-  500: $color-accent,
-  contrast: (
-    500: black,
-  )
-));
-
-$my-theme: mat.define-light-theme((
+$myapp-theme: mat.m2-define-light-theme((
   color: (
-    primary: $my-primary,
-    accent: $my-accent,
-  ),
-  typography: mat.define-typography-config($font-family: $font-family),
+    primary: $myapp-theme-primary,
+    accent: $myapp-theme-accent,
+    warn: $myapp-theme-warn,
+  )
 ));
 
-@include mat.all-component-themes($my-theme);
+@include mat.all-component-themes($myapp-theme);
