@@ -15,44 +15,44 @@
   .p-datatable {
     .p-datatable-header {
       background-color: #ffffff;
-      border-color: #f0f0f0;
+      border-color: #f8f9fa;
     }
 
     .p-datatable-thead > tr > th {
-      background-color: #f8f9fa;
-      color: #495057;
-      border-color: #f0f0f0;
+      background-color: #ffffff;
+      color: #333333;
+      border-color: #f8f9fa;
     }
 
     .p-datatable-tbody > tr {
       background-color: #ffffff;
 
       &:nth-child(even) {
-        background-color: #fcfcfc;
+        background-color: #ffffff;
       }
 
       > td {
-        border-color: #f0f0f0;
+        border-color: #f8f9fa;
       }
     }
   }
 
   .p-inputtext {
     background-color: #ffffff;
-    border-color: #ced4da;
-    color: #495057;
+    border-color: #e9ecef;
+    color: #333333;
 
     &:enabled:focus {
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.1);
     }
   }
 
   .p-dropdown {
     background-color: #ffffff;
-    border-color: #ced4da;
+    border-color: #e9ecef;
 
     .p-dropdown-label {
-      color: #495057;
+      color: #333333;
     }
 
     .p-dropdown-trigger {
@@ -74,14 +74,14 @@
 
   .p-paginator {
     background-color: #ffffff;
-    color: #6c757d;
+    color: #333333;
 
     .p-paginator-pages .p-paginator-page {
-      color: #6c757d;
+      color: #333333;
 
       &.p-highlight {
-        background-color: #e9ecef;
-        color: #495057;
+        background-color: #f8f9fa;
+        color: #333333;
       }
     }
 
@@ -89,10 +89,10 @@
     .p-paginator-prev,
     .p-paginator-next,
     .p-paginator-last {
-      color: #6c757d;
+      color: #333333;
 
       &:not(.p-disabled):not(.p-highlight):hover {
-        background-color: #e9ecef;
+        background-color: #f8f9fa;
       }
     }
   }
