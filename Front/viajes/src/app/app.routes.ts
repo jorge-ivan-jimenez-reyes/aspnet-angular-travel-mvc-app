@@ -6,15 +6,10 @@ export const routes: Routes = [
         path: '',
         redirectTo: 'viajes',
         pathMatch: 'full'
-
-
-
-
-
     },
     {
         path: 'viajes',
         component: ViajesComponent
     }
-    
+
 ];
