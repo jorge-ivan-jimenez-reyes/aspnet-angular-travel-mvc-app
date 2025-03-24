@@ -1,22 +1,40 @@
 :root {
-  --color-background: #ffffff;       /* Fondo principal: blanco puro */
-  --color-surface: #f5f7fa;          /* Superficies y tarjetas: gris muy claro */
-  --color-primary: #3c6e71;          /* Verde azulado sobrio */
-  --color-accent: #284b63;           /* Azul profundo para énfasis */
-  --color-text-primary: #353535;     /* Texto oscuro legible */
+  /* PALETA BASE CLARA */
+  --color-background: #ffffff;       /* Fondo principal */
+  --color-surface: #f5f7fa;          /* Tarjetas, contenedores */
+  --color-muted: #f0f0f0;            /* Hover, fondos suaves */
   --color-border: #e0e0e0;           /* Bordes sutiles */
-  --color-muted: #f0f0f0;            /* Fondos secundarios, hover */
 
-  --color-success: #27ae60;          /* Verde éxito */
-  --color-warning: #f2994a;          /* Naranja advertencia */
-  --color-error: #eb5757;            /* Rojo error */
+  /* PALETA PRINCIPAL */
+  --color-primary: #3c6e71;          /* Verde azulado suave */
+  --color-accent: #284b63;           /* Azul refinado para énfasis */
+  --color-text-primary: #353535;     /* Gris oscuro legible */
+
+  /* SEMÁNTICOS */
+  --color-success: #27ae60;
+  --color-warning: #f2994a;
+  --color-error: #eb5757;
 }
 
+/* BASE GENERAL */
 body {
+  margin: 0;
+  font-family: 'Inter', 'Roboto', sans-serif;
   background-color: var(--color-background);
   color: var(--color-text-primary);
 }
 
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* PRIMENG COMPONENTES */
 .p-component {
   color: var(--color-text-primary);
 }
@@ -24,12 +42,15 @@ body {
 .p-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .p-button {
   background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: white;
+  border: 1px solid var(--color-primary);
+  color: #fff;
+  font-weight: 500;
 
   &:hover {
     background-color: var(--color-accent);
@@ -37,8 +58,9 @@ body {
   }
 
   &.p-button-secondary {
-    background-color: var(--color-accent);
-    border-color: var(--color-accent);
+    background-color: var(--color-muted);
+    border-color: var(--color-muted);
+    color: var(--color-text-primary);
   }
 }
 
@@ -49,16 +71,20 @@ body {
   }
 
   .p-datatable-thead > tr > th {
-    background-color: var(--color-surface);
+    background-color: var(--color-muted);
     color: var(--color-text-primary);
     border-color: var(--color-border);
   }
 
   .p-datatable-tbody > tr {
     background-color: var(--color-background);
-    
+
     &:nth-child(even) {
-      background-color: var(--color-muted);
+      background-color: #fcfcfc;
+    }
+
+    &:hover {
+      background-color: #f2f6f8;
     }
 
     > td {
@@ -67,30 +93,43 @@ body {
   }
 }
 
-.p-paginator {
-  background-color: var(--color-surface);
-  border-color: var(--color-border);
-}
-
-.p-dropdown {
+.p-inputtext,
+.p-dropdown,
+.p-multiselect {
   background-color: var(--color-background);
-  border-color: var(--color-border);
-}
-
-.p-inputtext {
-  background-color: var(--color-background);
-  border-color: var(--color-border);
+  border: 1px solid var(--color-border);
   color: var(--color-text-primary);
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(60, 110, 113, 0.15);
+  }
 }
 
 .p-tag {
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+
   &.p-tag-success {
     background-color: var(--color-success);
+    color: white;
   }
+
   &.p-tag-warning {
     background-color: var(--color-warning);
+    color: white;
   }
+
   &.p-tag-danger {
     background-color: var(--color-error);
+    color: white;
   }
+}
+
+.p-paginator {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
 }

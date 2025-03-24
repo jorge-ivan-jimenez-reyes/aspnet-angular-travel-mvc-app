@@ -1,12 +1,12 @@
 .viaje-form-container {
   padding: 2rem;
-  background-color: var(--color-background); // blanco (#ffffff)
+  background-color: var(--color-background); // blanco
   border-radius: 0.75rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 
   h2 {
     margin-bottom: 1.5rem;
-    color: var(--color-primary); // verde azulado (#3c6e71)
+    color: var(--color-primary); // verde azulado sobrio
     font-weight: 600;
     font-size: 1.75rem;
   }
@@ -22,7 +22,7 @@
       label {
         margin-bottom: 0.5rem;
         font-weight: 500;
-        color: var(--color-text-primary); // gris oscuro (#353535)
+        color: var(--color-text-primary); // gris oscuro legible
         font-size: 0.95rem;
       }
 
@@ -31,16 +31,16 @@
       textarea {
         padding: 0.75rem 1rem;
         font-size: 1rem;
-        border: 1px solid var(--color-surface); // gris claro (#d9d9d9)
+        border: 1px solid var(--color-border); // borde sutil
         border-radius: 6px;
-        background-color: var(--color-background);
-        color: var(--color-text-primary);
+        background-color: var(--color-background); // blanco
+        color: var(--color-text-primary); // texto oscuro
         transition: border 0.2s ease, box-shadow 0.2s ease;
 
         &:focus {
           outline: none;
-          border-color: var(--color-accent); // azul profundo (#284b63)
-          box-shadow: 0 0 0 3px rgba(60, 110, 113, 0.15); // con transparencia
+          border-color: var(--color-accent); // azul profundo
+          box-shadow: 0 0 0 3px rgba(40, 75, 99, 0.15);
         }
       }
     }
@@ -61,11 +61,11 @@
       transition: background-color 0.3s ease, filter 0.2s ease;
 
       &.submit {
-        background-color: var(--color-primary); // verde azulado
+        background-color: var(--color-primary);
         color: #fff;
 
         &:hover {
-          filter: brightness(0.95);
+          background-color: var(--color-accent);
         }
       }
 
@@ -75,7 +75,7 @@
         border: 1px solid var(--color-text-primary);
 
         &:hover {
-          background-color: var(--color-surface); // gris claro
+          background-color: var(--color-muted); // gris muy claro
         }
       }
     }
