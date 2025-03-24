@@ -1,12 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatSortModule, MatSort } from '@angular/material/sort';
@@ -17,6 +10,7 @@ import { Transporte } from '../modelos/transporte.model';
 import { EstatusViaje } from '../modelos/estatus-viaje.model';
 import { ViajeService } from '../servicios/viaje.service';
 import { CatalogoService } from '../servicios/catalogo.service';
+import { ViajeFormComponent } from './viaje-form/viaje-form.component';
 
 @Component({
   selector: 'app-viajes',
