@@ -10,6 +10,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ToastModule } from 'primeng/toast';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ToolbarModule } from 'primeng/toolbar';
 
 import { ViajesRoutingModule } from './viajes-routing.module';
 import { ViajesComponent } from './components/viajes/viajes.component';
@@ -36,7 +38,9 @@ import { CatalogoService } from './services/catalogo.service';
     InputNumberModule,
     CalendarModule,
     DropdownModule,
-    ToastModule
+    ToastModule,
+    ConfirmDialogModule,
+    ToolbarModule
   ],
   providers: [
     ViajeService,
