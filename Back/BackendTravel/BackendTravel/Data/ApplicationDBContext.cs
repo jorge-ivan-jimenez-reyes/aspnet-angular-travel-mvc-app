@@ -13,6 +13,28 @@ public class AppDbContext : DbContext
 
      protected override void OnModelCreating(ModelBuilder modelBuilder)
      {
+          base.OnModelCreating(modelBuilder);
+          modelBuilder.Entity<EstatusViaje>().HasData(
+               new EstatusViaje { Id = 1, Nombre = "Programado" },
+               new EstatusViaje { Id = 2, Nombre = "En curso" },
+               new EstatusViaje { Id = 3, Nombre = "Finalizado" },
+               new EstatusViaje { Id = 4, Nombre = "Cancelado" }
+          );
+          
+          
+          modelBuilder.Entity<Lugar>().HasData(
+               new Lugar { Id = 1, Nombre = "CDMX" },
+               new Lugar { Id = 2, Nombre = "Guadalajara" },
+               new Lugar { Id = 3, Nombre = "Monterrey" }
+          );
+
+          modelBuilder.Entity<Transporte>().HasData(
+               new Transporte { Id = 1, Nombre = "Camión de pasajeros" },
+               new Transporte { Id = 2, Nombre = "Camión de carga" },
+               new Transporte { Id = 3, Nombre = "Camioneta tipo van" },
+               new Transporte { Id = 4, Nombre = "Tráiler" }
+          );
+
           
           modelBuilder.Entity<Viaje>()
                .Property(v => v.Costo)

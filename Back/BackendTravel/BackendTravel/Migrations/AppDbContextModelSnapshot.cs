@@ -37,6 +37,28 @@ namespace BackendTravel.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("EstatusesViaje");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nombre = "Programado"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nombre = "En curso"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nombre = "Finalizado"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nombre = "Cancelado"
+                        });
                 });
 
             modelBuilder.Entity("BackendTravel.Models.Entities.Lugar", b =>
@@ -60,6 +82,26 @@ namespace BackendTravel.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Lugares");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Activo = true,
+                            Nombre = "CDMX"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Activo = true,
+                            Nombre = "Guadalajara"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Activo = true,
+                            Nombre = "Monterrey"
+                        });
                 });
 
             modelBuilder.Entity("BackendTravel.Models.Entities.Transporte", b =>
@@ -83,6 +125,32 @@ namespace BackendTravel.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Transportes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Activo = true,
+                            Nombre = "Camión de pasajeros"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Activo = true,
+                            Nombre = "Camión de carga"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Activo = true,
+                            Nombre = "Camioneta tipo van"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Activo = true,
+                            Nombre = "Tráiler"
+                        });
                 });
 
             modelBuilder.Entity("BackendTravel.Models.Entities.Viaje", b =>
