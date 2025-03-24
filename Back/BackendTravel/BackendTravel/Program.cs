@@ -20,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         .LogTo(Console.WriteLine, LogLevel.Information);
 });
 
+
 builder.Services.AddScoped<IViajeRepository, ViajeRepository>();
 builder.Services.AddScoped<IViajeService, ViajeService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
