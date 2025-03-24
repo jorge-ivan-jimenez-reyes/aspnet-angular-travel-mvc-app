@@ -12,7 +12,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent // This is not a standalone component
   ],
   imports: [
     BrowserModule,
