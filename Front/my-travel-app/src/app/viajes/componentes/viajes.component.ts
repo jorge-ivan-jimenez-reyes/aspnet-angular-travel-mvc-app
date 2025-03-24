@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Viaje } from '../../modelos/viaje.model';
-import { Lugar } from '../../modelos/lugar.model';
-import { Transporte } from '../../modelos/transporte.model';
-import { EstatusViaje } from '../../modelos/estatus-viaje.model';
-import { ViajeService } from '../../servicios/viaje.service';
-import { CatalogoService } from '../../servicios/catalogo.service';
+import { Viaje } from '../modelos/viaje.model';
+import { Lugar } from '../modelos/lugar.model';
+import { Transporte } from '../modelos/transporte.model';
+import { EstatusViaje } from '../modelos/estatus-viaje.model';
+import { ViajeService } from '../servicios/viaje.service';
+import { CatalogoService } from '../servicios/catalogo.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({

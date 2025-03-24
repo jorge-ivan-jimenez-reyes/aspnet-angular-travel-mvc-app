@@ -4,20 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Back/BackendTravel/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/BackendTravel/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-travel-app/src/app/viajes/componentes/viajes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-travel-app/src/app/viajes/componentes/viajes.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2uk1MHOjuD6K8jgh5fshwrz8BhP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,6 +34,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -34,7 +44,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "watcher.settings",
     "ts.external.directory.path": "/Users/jorgejimenez/Documents/GFRESHHH/aspnet-angular-travel-mvc-app/Front/my-travel-app/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -55,10 +65,120 @@
       <option name="presentableId" value="Default" />
       <updated>1742777708650</updated>
       <workItem from="1742777709902" duration="528000" />
+      <workItem from="1742778251441" duration="1383000" />
     </task>
+    <task id="LOCAL-00001" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778275472</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778275472</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778558685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778558685</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778616704</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778616704</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778681236</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778681236</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778695014</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778695014</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778712426</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778712426</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778743901</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778743901</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778837362</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778837362</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778883798</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778883798</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742778928156</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1742778928156</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742779005867</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1742779005867</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742779048986</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742779048986</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742779498591</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742779498591</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update workspace configuration to enhance DbContext with sensitive data logging and console output" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace configuration to enhance DbContext with sensitive data logging and console output" />
   </component>
 </project>
