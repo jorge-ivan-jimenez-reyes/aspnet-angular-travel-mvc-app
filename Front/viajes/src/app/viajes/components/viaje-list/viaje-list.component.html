@@ -1,0 +1,27 @@
+<div class="viaje-list-container">
+  <h2>Lista de Viajes</h2>
+  <button (click)="onNewViaje()">Nuevo Viaje</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Destino</th>
+        <th>Fecha de Inicio</th>
+        <th>Fecha de Fin</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let viaje of viajes">
+        <td>{{ viaje.id }}</td>
+        <td>{{ viaje.destino }}</td>
+        <td>{{ viaje.fechaInicio | date }}</td>
+        <td>{{ viaje.fechaFin | date }}</td>
+        <td>
+          <button (click)="onEditViaje(viaje)">Editar</button>
+          <button (click)="onDeleteViaje(viaje)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

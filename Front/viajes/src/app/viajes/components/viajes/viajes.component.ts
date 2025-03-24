@@ -2,11 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-viajes',
-  standalone: true,
-  imports: [],
   templateUrl: './viajes.component.html',
-  styleUrl: './viajes.component.scss'
+  styleUrls: ['./viajes.component.scss']
 })
 export class ViajesComponent {
-
+  // This component will serve as a container for the other components
 }

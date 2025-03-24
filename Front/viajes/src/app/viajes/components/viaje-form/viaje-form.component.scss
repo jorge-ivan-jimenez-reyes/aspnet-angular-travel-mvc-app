@@ -1,0 +1,19 @@
+.viaje-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-top: 20px;
+      align-self: flex-start;
+    }
+  }
+}

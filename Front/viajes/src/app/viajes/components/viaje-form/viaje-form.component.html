@@ -1,0 +1,7 @@
+<div class="viaje-form-container">
+  <h2>{{ isEditing ? 'Editar Viaje' : 'Nuevo Viaje' }}</h2>
+  <form [formGroup]="viajeForm" (ngSubmit)="onSubmit()">
+    <!-- Add form fields here -->
+    <button type="submit" [disabled]="viajeForm.invalid">Guardar</button>
+  </form>
+</div>
