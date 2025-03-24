@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
@@ -35,6 +35,7 @@ import { CatalogoService } from './services/catalogo.service';
     ViajesRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     TableModule,
     ButtonModule,
     InputTextModule,

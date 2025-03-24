@@ -18,6 +18,7 @@ export class ViajeListComponent implements OnInit {
   viajes: Viaje[] = [];
   loading: boolean = true;
   estatusNombres: { [key: number]: string } = {};
+  estatusOptions: any[] = [];
 
   constructor(
     private router: Router,
@@ -52,6 +53,7 @@ export class ViajeListComponent implements OnInit {
       (estatusViajes) => {
         estatusViajes.forEach(estatus => {
           this.estatusNombres[estatus.id] = estatus.nombre;
+          this.estatusOptions.push({ label: estatus.nombre, value: estatus.id });
         });
       },
       (error) => {

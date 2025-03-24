@@ -1,46 +1,62 @@
 :host ::ng-deep {
   .viaje-list-container {
-    background-color: var(--color-surface);
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
   }
 
   .p-card {
-    background-color: var(--color-background);
+    background-color: #ffffff;
     border: none;
     box-shadow: none;
   }
 
   .p-datatable {
     .p-datatable-header {
-      background-color: var(--color-background);
-      border-color: var(--color-border);
+      background-color: #ffffff;
+      border-color: #e0e0e0;
     }
 
     .p-datatable-thead > tr > th {
-      background-color: var(--color-muted);
-      color: var(--color-text-primary);
-      border-color: var(--color-border);
+      background-color: #ffffff;
+      color: #333333;
+      border-color: #e0e0e0;
     }
 
     .p-datatable-tbody > tr {
+      background-color: #ffffff;
+
       &:nth-child(even) {
-        background-color: var(--color-surface);
+        background-color: #ffffff;
       }
 
       > td {
-        border-color: var(--color-border);
+        border-color: #e0e0e0;
       }
     }
   }
 
-  .p-progressbar {
-    height: 0.5rem;
-    background-color: var(--color-muted);
+  .p-inputtext {
+    background-color: #ffffff;
+    border-color: #e0e0e0;
+    color: #333333;
 
-    .p-progressbar-value {
-      background-color: var(--color-primary);
+    &:enabled:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .p-dropdown {
+    background-color: #ffffff;
+    border-color: #e0e0e0;
+
+    .p-dropdown-label {
+      color: #333333;
+    }
+
+    .p-dropdown-trigger {
+      background-color: #ffffff;
     }
   }
 
