@@ -38,6 +38,10 @@ export class ViajeFormComponent implements OnInit {
     });
   }
 
+  navigateToViajes(): void {
+    this.router.navigate(['/viajes']);
+  }
+
   ngOnInit(): void {
     this.loadCatalogos();
     const id = this.route.snapshot.paramMap.get('id');
