@@ -1,10 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<h2>Gestión de Viajes</h2>
 
-</body>
-</html>
+<form [formGroup]="form" (ngSubmit)="guardar()">
+  <input formControlName="id" type="hidden" />
+
+  <label>Nombre:</label>
+  <input formControlName="nombre" type="text" />
+
+  <label>Fecha Inicio:</label>
+  <input formControlName="fechaInicio" type="datetime-local" />
+
+  <label>Fecha Fin:</label>
+  <input formControlName="fechaFin" type="datetime-local" />
+
+  <label>Origen:</label>
+  <select formControlName="origenId">
+    <option *ngFor="let lugar of lugares" [value]="lugar.id">{{ lugar.nombre }}</option>
+  </select>
+
+  <label>Destino:</label>
+  <select formControlName="destinoId">
+    <option *ngFor="let lugar of lugares" [value]="lugar.id">{{ lugar.nombre }}</option>
+  </select>
+
+  <label>Transporte:</label>
+  <select formControlName="transporteId">
+    <option *ngFor="let t of transportes" [value]="t.id">{{ t.nombre }}</option>
+  </select>
+
+  <label>Estatus:</label>
+  <select formControlName="estatusId">
+    <option *ngFor="let e of estatuses" [value]="e.id">{{ e.nombre }}</option>
+  </select>
+
+  <label>Costo:</label>
+  <input formControlName="costo" type="number" step="0.01" />
+
+  <label>Descripción:</label>
+  <input formControlName="descripcion" type="text" />
+
+  <button type="submit">{{ modoEditar ? 'Actualizar' : 'Crear' }}</button>
+  <button type="button" (click)="resetFormulario()">Cancelar</button>
+</form>
+
+<hr />
+
+<h3>Viajes Registrados</h3>
+<table border="1">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Fechas</th>
+    <th>Origen</th>
+    <th>Destino</th>
+    <th>Costo</th>
+    <th>Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let viaje of viajes">
+    <td>{{ viaje.nombre }}</td>
+    <td>{{ viaje.fechaInicio | date:'short' }} - {{ viaje.fechaFin | date:'short' }}</td>
+    <td>{{ lugares.find(l => l.id === viaje.origenId)?.nombre }}</td>
+    <td>{{ lugares.find(l => l.id === viaje.destinoId)?.nombre }}</td>
+    <td>${{ viaje.costo }}</td>
+    <td>
+      <button (click)="editar(viaje)">✏️</button>
+      <button (click)="eliminar(viaje.id)">🗑️</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
