@@ -51,9 +51,10 @@ h2, h3 {
       &[type="submit"] {
         background-color: var(--travel-primary);
         color: white;
+        transition: filter 0.3s;
 
         &:hover {
-          background-color: darken(var(--travel-primary), 10%);
+          filter: brightness(0.9);
         }
       }
 
