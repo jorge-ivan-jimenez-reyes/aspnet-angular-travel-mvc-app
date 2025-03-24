@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-travel-app/src/app/viajes/componentes/viajes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-travel-app/src/app/viajes/componentes/viajes.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-travel-app/src/app/viajes/componentes/viajes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-travel-app/src/app/viajes/componentes/viajes.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1742777708650</updated>
       <workItem from="1742777709902" duration="528000" />
-      <workItem from="1742778251441" duration="1383000" />
+      <workItem from="1742778251441" duration="2085000" />
     </task>
     <task id="LOCAL-00001" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
       <option name="closed" value="true" />
@@ -171,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742779498591</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742779657970</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1742779657970</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

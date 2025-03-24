@@ -62,8 +62,9 @@
   <tr *ngFor="let viaje of viajes">
     <td>{{ viaje.nombre }}</td>
     <td>{{ viaje.fechaInicio | date:'short' }} - {{ viaje.fechaFin | date:'short' }}</td>
-    <td>{{ lugares.find(l => l.id === viaje.origenId)?.nombre }}</td>
-    <td>{{ lugares.find(l => l.id === viaje.destinoId)?.nombre }}</td>
+    <td>{{ getNombreLugar(viaje.origenId) }}</td>
+    <td>{{ getNombreLugar(viaje.destinoId) }}</td>
+
     <td>${{ viaje.costo }}</td>
     <td>
       <button (click)="editar(viaje)">✏️</button>

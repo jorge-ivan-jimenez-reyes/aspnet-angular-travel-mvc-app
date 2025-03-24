@@ -13,8 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
   selector: 'app-viajes',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
-  templateUrl: './viajes.component.html',
-  styleUrls: ['./viajes.component.css']
+  templateUrl: 'viajes.component.html',
+  styleUrls: ['viajes.component.scss']
 })
 export class ViajesComponent implements OnInit {
   viajes: Viaje[] = [];
@@ -82,8 +82,17 @@ export class ViajesComponent implements OnInit {
     }
   }
 
+  getNombreLugar(id: number): string {
+    const lugar = this.lugares.find(l => l.id === id);
+    return lugar ? lugar.nombre : '';
+  }
+
   resetFormulario(): void {
     this.form.reset();
     this.modoEditar = false;
   }
+
+
+
+
 }
