@@ -1,99 +1,96 @@
 :root {
-  --color-background: #ffffff;      /* Blanco */
-  --color-surface: #d9d9d9;         /* Gris claro para fondos suaves */
-  --color-primary: #3c6e71;         /* Verde azulado elegante */
-  --color-accent: #284b63;          /* Azul profundo para énfasis o botones */
-  --color-text-primary: #353535;    /* Gris oscuro para texto principal */
-  --color-border: #d9d9d9;          /* Bordes suaves */
-  --color-muted: #f0f0f0;           /* Para fondos secundarios o hover */
+  --color-background: #ffffff;       /* Fondo principal: blanco puro */
+  --color-surface: #f5f7fa;          /* Superficies y tarjetas: gris muy claro */
+  --color-primary: #3c6e71;          /* Verde azulado sobrio */
+  --color-accent: #284b63;           /* Azul profundo para énfasis */
+  --color-text-primary: #353535;     /* Texto oscuro legible */
+  --color-border: #e0e0e0;           /* Bordes sutiles */
+  --color-muted: #f0f0f0;            /* Fondos secundarios, hover */
+
+  --color-success: #27ae60;          /* Verde éxito */
+  --color-warning: #f2994a;          /* Naranja advertencia */
+  --color-error: #eb5757;            /* Rojo error */
 }
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  margin: 0;
   background-color: var(--color-background);
   color: var(--color-text-primary);
-  line-height: 1.6;
-  min-height: 100vh;
 }
 
 .p-component {
-  font-family: inherit;
+  color: var(--color-text-primary);
+}
+
+.p-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
 }
 
 .p-button {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
-  color: #ffffff;
+  color: white;
+
+  &:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  &.p-button-secondary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
 }
 
-.p-button:hover {
-  background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
+.p-datatable {
+  .p-datatable-header {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  .p-datatable-thead > tr > th {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    border-color: var(--color-border);
+  }
+
+  .p-datatable-tbody > tr {
+    background-color: var(--color-background);
+    
+    &:nth-child(even) {
+      background-color: var(--color-muted);
+    }
+
+    > td {
+      border-color: var(--color-border);
+    }
+  }
 }
 
-.p-datatable .p-datatable-thead > tr > th {
+.p-paginator {
   background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.p-dropdown {
+  background-color: var(--color-background);
+  border-color: var(--color-border);
+}
+
+.p-inputtext {
+  background-color: var(--color-background);
+  border-color: var(--color-border);
   color: var(--color-text-primary);
 }
 
-.p-toolbar {
-  background-color: var(--color-surface);
-  border-color: var(--color-surface);
-}
-
-.viaje-list-container, .viaje-form-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--color-background);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  border-radius: 4px;
-}
-
-.p-field {
-  margin-bottom: 1.5rem;
-}
-
-.p-field > label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--color-text-primary);
-}
-
-.form-actions {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-}
-
-.p-card {
-  background-color: var(--color-background);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.p-tabview .p-tabview-nav {
-  background-color: var(--color-surface);
-}
-
-.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.p-inputtext:enabled:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
-}
-
-.p-dropdown:not(.p-disabled).p-focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
-}
-
-.p-calendar .p-inputtext:enabled:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
+.p-tag {
+  &.p-tag-success {
+    background-color: var(--color-success);
+  }
+  &.p-tag-warning {
+    background-color: var(--color-warning);
+  }
+  &.p-tag-danger {
+    background-color: var(--color-error);
+  }
 }

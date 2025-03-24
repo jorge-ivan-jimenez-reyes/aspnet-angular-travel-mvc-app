@@ -1,10 +1,45 @@
+:root {
+  --color-background: #ffffff;       /* Fondo principal: blanco puro */
+  --color-surface: #f5f7fa;          /* Superficies y tarjetas: gris muy claro */
+  --color-primary: #3c6e71;          /* Verde azulado sobrio */
+  --color-accent: #284b63;           /* Azul profundo para énfasis */
+  --color-text-primary: #353535;     /* Texto oscuro legible */
+  --color-border: #e0e0e0;           /* Bordes sutiles */
+  --color-muted: #f0f0f0;            /* Fondos secundarios, hover */
+
+  --color-success: #27ae60;          /* Verde éxito */
+  --color-warning: #f2994a;          /* Naranja advertencia */
+  --color-error: #eb5757;            /* Rojo error */
+}
 /* app.component.scss */
 
 .app-wrapper {
   min-height: 100vh;
-  background-color: var(--color-secondary);
+  background-color: var(--color-background);
   display: flex;
   flex-direction: column;
   padding: 2rem;
   box-sizing: border-box;
+}
+
+.app-content {
+  flex: 1;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.app-header {
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.app-footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
 }
