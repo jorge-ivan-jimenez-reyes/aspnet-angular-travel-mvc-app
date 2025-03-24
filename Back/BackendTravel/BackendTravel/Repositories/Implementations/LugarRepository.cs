@@ -8,9 +8,9 @@ namespace BackendTravel.Repositories.Implementations
 {
     public class LugarRepository : ILugarRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly AppDbContext _context;
 
-        public LugarRepository(ApplicationDbContext context)
+        public LugarRepository(AppDbContext context)
         {
             _context = context;
         }
