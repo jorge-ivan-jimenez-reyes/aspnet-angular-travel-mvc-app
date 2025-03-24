@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
-      <change beforePath="$PROJECT_DIR$/../../Front/viajes/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/viajes/src/styles.scss" afterDir="false" />
-    </list>
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,7 +148,7 @@
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
       <workItem from="1742756140629" duration="14410000" />
-      <workItem from="1742775495080" duration="10456000" />
+      <workItem from="1742775495080" duration="11055000" />
     </task>
     <task id="LOCAL-00014" summary="Transporte.cs">
       <option name="closed" value="true" />

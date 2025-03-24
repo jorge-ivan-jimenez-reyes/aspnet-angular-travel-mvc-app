@@ -1,45 +1,29 @@
 <div class="viaje-list-container">
   <h2>Lista de Viajes</h2>
-  <button mat-raised-button color="primary" (click)="onNewViaje()">Nuevo Viaje</button>
-  <table mat-table [dataSource]="viajes" class="mat-elevation-z8">
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef>ID</th>
-      <td mat-cell *matCellDef="let viaje">{{ viaje.id }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="destino">
-      <th mat-header-cell *matHeaderCellDef>Destino</th>
-      <td mat-cell *matCellDef="let viaje">{{ viaje.destino }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="fechaInicio">
-      <th mat-header-cell *matHeaderCellDef>Fecha de Inicio</th>
-      <td mat-cell *matCellDef="let viaje">{{ viaje.fechaInicio | date }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="fechaFin">
-      <th mat-header-cell *matHeaderCellDef>Fecha de Fin</th>
-      <td mat-cell *matCellDef="let viaje">{{ viaje.fechaFin | date }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="presupuesto">
-      <th mat-header-cell *matHeaderCellDef>Presupuesto</th>
-      <td mat-cell *matCellDef="let viaje">{{ viaje.presupuesto | currency }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="acciones">
-      <th mat-header-cell *matHeaderCellDef>Acciones</th>
-      <td mat-cell *matCellDef="let viaje">
-        <button mat-icon-button color="primary" (click)="onEditViaje(viaje)">
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-icon-button color="warn" (click)="onDeleteViaje(viaje)">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="['id', 'destino', 'fechaInicio', 'fechaFin', 'presupuesto', 'acciones']"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['id', 'destino', 'fechaInicio', 'fechaFin', 'presupuesto', 'acciones']"></tr>
-  </table>
+  <p-button label="Nuevo Viaje" icon="pi pi-plus" (onClick)="onNewViaje()"></p-button>
+  <p-table [value]="viajes" [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>
+        <th>Destino</th>
+        <th>Fecha de Inicio</th>
+        <th>Fecha de Fin</th>
+        <th>Presupuesto</th>
+        <th>Acciones</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-viaje>
+      <tr>
+        <td>{{viaje.id}}</td>
+        <td>{{viaje.destino}}</td>
+        <td>{{viaje.fechaInicio | date}}</td>
+        <td>{{viaje.fechaFin | date}}</td>
+        <td>{{viaje.presupuesto | currency}}</td>
+        <td>
+          <p-button icon="pi pi-pencil" (onClick)="onEditViaje(viaje)" styleClass="p-button-text"></p-button>
+          <p-button icon="pi pi-trash" (onClick)="onDeleteViaje(viaje)" styleClass="p-button-text p-button-danger"></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
 </div>

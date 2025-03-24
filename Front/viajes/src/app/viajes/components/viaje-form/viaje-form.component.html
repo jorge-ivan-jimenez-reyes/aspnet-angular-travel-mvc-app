@@ -1,68 +1,53 @@
+<p-toast></p-toast>
 <div class="viaje-form-container">
   <h2>{{ isEditing ? 'Editar' : 'Nuevo' }} Viaje</h2>
   <form [formGroup]="viajeForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="fill">
-      <mat-label>Destino</mat-label>
-      <input matInput formControlName="destino" required>
-      <mat-error *ngIf="viajeForm.get('destino')?.hasError('required')">El destino es requerido</mat-error>
-    </mat-form-field>
+    <div class="p-field">
+      <label for="destino">Destino</label>
+      <input id="destino" type="text" pInputText formControlName="destino" required>
+      <small *ngIf="viajeForm.get('destino')?.hasError('required') && viajeForm.get('destino')?.touched" class="p-error">El destino es requerido</small>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Fecha de Inicio</mat-label>
-      <input matInput [matDatepicker]="pickerInicio" formControlName="fechaInicio" required>
-      <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
-      <mat-datepicker #pickerInicio></mat-datepicker>
-      <mat-error *ngIf="viajeForm.get('fechaInicio')?.hasError('required')">La fecha de inicio es requerida</mat-error>
-    </mat-form-field>
+    <div class="p-field">
+      <label for="fechaInicio">Fecha de Inicio</label>
+      <p-calendar id="fechaInicio" formControlName="fechaInicio" [showIcon]="true" required></p-calendar>
+      <small *ngIf="viajeForm.get('fechaInicio')?.hasError('required') && viajeForm.get('fechaInicio')?.touched" class="p-error">La fecha de inicio es requerida</small>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Fecha de Fin</mat-label>
-      <input matInput [matDatepicker]="pickerFin" formControlName="fechaFin" required>
-      <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
-      <mat-datepicker #pickerFin></mat-datepicker>
-      <mat-error *ngIf="viajeForm.get('fechaFin')?.hasError('required')">La fecha de fin es requerida</mat-error>
-    </mat-form-field>
+    <div class="p-field">
+      <label for="fechaFin">Fecha de Fin</label>
+      <p-calendar id="fechaFin" formControlName="fechaFin" [showIcon]="true" required></p-calendar>
+      <small *ngIf="viajeForm.get('fechaFin')?.hasError('required') && viajeForm.get('fechaFin')?.touched" class="p-error">La fecha de fin es requerida</small>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Presupuesto</mat-label>
-      <input matInput type="number" formControlName="presupuesto" required>
-      <mat-error *ngIf="viajeForm.get('presupuesto')?.hasError('required')">El presupuesto es requerido</mat-error>
-      <mat-error *ngIf="viajeForm.get('presupuesto')?.hasError('min')">El presupuesto debe ser mayor o igual a 0</mat-error>
-    </mat-form-field>
+    <div class="p-field">
+      <label for="presupuesto">Presupuesto</label>
+      <p-inputNumber id="presupuesto" formControlName="presupuesto" [min]="0" mode="currency" currency="USD" locale="en-US" required></p-inputNumber>
+      <small *ngIf="viajeForm.get('presupuesto')?.hasError('required') && viajeForm.get('presupuesto')?.touched" class="p-error">El presupuesto es requerido</small>
+      <small *ngIf="viajeForm.get('presupuesto')?.hasError('min') && viajeForm.get('presupuesto')?.touched" class="p-error">El presupuesto debe ser mayor o igual a 0</small>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Lugar</mat-label>
-      <mat-select formControlName="lugarId" required>
-        <mat-option *ngFor="let lugar of lugares" [value]="lugar.id">
-          {{ lugar.nombre }}
-        </mat-option>
-      </mat-select>
-      <mat-error *ngIf="viajeForm.get('lugarId')?.hasError('required')">El lugar es requerido</mat-error>
-    </mat-form-field>
+    <div class="p-field">
+      <label for="lugarId">Lugar</label>
+      <p-dropdown id="lugarId" [options]="lugares" formControlName="lugarId" optionLabel="nombre" optionValue="id" [filter]="true" filterBy="nombre" required></p-dropdown>
+      <small *ngIf="viajeForm.get('lugarId')?.hasError('required') && viajeForm.get('lugarId')?.touched" class="p-error">El lugar es requerido</small>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Estatus</mat-label>
-      <mat-select formControlName="estatusId" required>
-        <mat-option *ngFor="let estatus of estatusViajes" [value]="estatus.id">
-          {{ estatus.nombre }}
-        </mat-option>
-      </mat-select>
-      <mat-error *ngIf="viajeForm.get('estatusId')?.hasError('required')">El estatus es requerido</mat-error>
-    </mat-form-field>
+    <div class="p-field">
+      <label for="estatusId">Estatus</label>
+      <p-dropdown id="estatusId" [options]="estatusViajes" formControlName="estatusId" optionLabel="nombre" optionValue="id" required></p-dropdown>
+      <small *ngIf="viajeForm.get('estatusId')?.hasError('required') && viajeForm.get('estatusId')?.touched" class="p-error">El estatus es requerido</small>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Transporte</mat-label>
-      <mat-select formControlName="transporteId" required>
-        <mat-option *ngFor="let transporte of transportes" [value]="transporte.id">
-          {{ transporte.nombre }}
-        </mat-option>
-      </mat-select>
-      <mat-error *ngIf="viajeForm.get('transporteId')?.hasError('required')">El transporte es requerido</mat-error>
-    </mat-form-field>
+    <div class="p-field">
+      <label for="transporteId">Transporte</label>
+      <p-dropdown id="transporteId" [options]="transportes" formControlName="transporteId" optionLabel="nombre" optionValue="id" required></p-dropdown>
+      <small *ngIf="viajeForm.get('transporteId')?.hasError('required') && viajeForm.get('transporteId')?.touched" class="p-error">El transporte es requerido</small>
+    </div>
 
     <div class="form-actions">
-      <button mat-raised-button color="primary" type="submit" [disabled]="!viajeForm.valid">Guardar</button>
-      <button mat-button type="button" (click)="navigateToViajes()">Cancelar</button>
+      <p-button type="submit" label="Guardar" [disabled]="!viajeForm.valid"></p-button>
+      <p-button type="button" label="Cancelar" (onClick)="navigateToViajes()" styleClass="p-button-secondary"></p-button>
     </div>
   </form>
 </div>

@@ -7,11 +7,13 @@ import { EstatusViaje } from '../../models/estatus-viaje.model';
 import { Transporte } from '../../models/transporte.model';
 import { ViajeService } from '../../services/viaje.service';
 import { CatalogoService } from '../../services/catalogo.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-viaje-form',
   templateUrl: './viaje-form.component.html',
-  styleUrls: ['./viaje-form.component.scss']
+  styleUrls: ['./viaje-form.component.scss'],
+  providers: [MessageService]
 })
 export class ViajeFormComponent implements OnInit {
   viajeForm: FormGroup;
@@ -25,7 +27,8 @@ export class ViajeFormComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private viajeService: ViajeService,
-    private catalogoService: CatalogoService
+    private catalogoService: CatalogoService,
+    private messageService: MessageService
   ) {
     this.viajeForm = this.fb.group({
       destino: ['', Validators.required],
@@ -69,27 +72,50 @@ export class ViajeFormComponent implements OnInit {
   loadViaje(id: number): void {
     this.viajeService.getViajeById(id).subscribe(
       (viaje) => {
-        this.viajeForm.patchValue(viaje);
+        this.viajeForm.patchValue({
+          ...viaje,
+          fechaInicio: new Date(viaje.fechaInicio),
+          fechaFin: new Date(viaje.fechaFin)
+        });
       },
-      (error) => console.error('Error fetching viaje:', error)
+      (error) => {
+        console.error('Error fetching viaje:', error);
+        this.messageService.add({severity:'error', summary: 'Error', detail: 'No se pudo cargar el viaje'});
+      }
     );
   }
 
   onSubmit(): void {
     if (this.viajeForm.valid) {
-      const viaje: Viaje = this.viajeForm.value;
+      const viaje: Viaje = {
+        ...this.viajeForm.value,
+        fechaInicio: this.viajeForm.value.fechaInicio.toISOString(),
+        fechaFin: this.viajeForm.value.fechaFin.toISOString()
+      };
       if (this.isEditing) {
         const id = this.route.snapshot.paramMap.get('id');
         if (id) {
           this.viajeService.updateViaje(+id, viaje).subscribe(
-            () => this.router.navigate(['/viajes']),
-            (error) => console.error('Error updating viaje:', error)
+            () => {
+              this.messageService.add({severity:'success', summary: 'Éxito', detail: 'Viaje actualizado correctamente'});
+              this.router.navigate(['/viajes']);
+            },
+            (error) => {
+              console.error('Error updating viaje:', error);
+              this.messageService.add({severity:'error', summary: 'Error', detail: 'No se pudo actualizar el viaje'});
+            }
           );
         }
       } else {
         this.viajeService.createViaje(viaje).subscribe(
-          () => this.router.navigate(['/viajes']),
-          (error) => console.error('Error creating viaje:', error)
+          () => {
+            this.messageService.add({severity:'success', summary: 'Éxito', detail: 'Viaje creado correctamente'});
+            this.router.navigate(['/viajes']);
+          },
+          (error) => {
+            console.error('Error creating viaje:', error);
+            this.messageService.add({severity:'error', summary: 'Error', detail: 'No se pudo crear el viaje'});
+          }
         );
       }
     }
