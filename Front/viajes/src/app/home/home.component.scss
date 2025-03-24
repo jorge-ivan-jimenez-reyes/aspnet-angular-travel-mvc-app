@@ -1,27 +1,36 @@
+@import '../../styles.scss';
+
 .home-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  text-align: center;
-  background-color: #f0f0f0;
+  background-color: $color-secondary;
 
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-  }
-
-  p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #666;
+  .content {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: $color-background;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-  }
+    width: 90%;
 
-  button {
-    font-size: 1.1em;
-    padding: 10px 20px;
+    h1 {
+      font-size: 2.5rem;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $color-text-primary;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      font-size: 1.1rem;
+      padding: 0.75rem 1.5rem;
+    }
   }
 }
