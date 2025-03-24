@@ -1,78 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'custom-theme'; // 👈 debe ir primero
+@use '@angular/material' as mat;
 
-// Colors
-$color-primary: #005792;
+// Variables globales
 $color-secondary: #F5F7FA;
-$color-accent: #FFCC00;
 $color-success: #27AE60;
 $color-warning: #F2994A;
-$color-error: #EB5757;
+$color-error: #6f3e3e;
 $color-text-primary: #2C3E50;
 $color-background: #FFFFFF;
 
-// Typography
 $font-family: 'Inter', 'Roboto', sans-serif;
 
-// Global styles
-body {
-  font-family: $font-family;
-  color: $color-text-primary;
-  background-color: $color-background;
+:root {
+  --color-secondary: #{$color-secondary};
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
+  --color-error: #{$color-error};
+  --color-text-primary: #{$color-text-primary};
+  --color-background: #{$color-background};
 }
 
-// You may need to import the font in your index.html or use a CDN link
-// For example, add this to your index.html <head> section:
-// <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+body {
+  font-family: $font-family;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  margin: 0;
+  height: 100%;
+}
 
-// Angular Material customization
-@use '@angular/material' as mat;
+html {
+  height: 100%;
+}
 
-$my-primary: mat.define-palette((
-  500: $color-primary,
-  contrast: (
-    500: white,
-  )
-));
-$my-accent: mat.define-palette((
-  500: $color-accent,
-  contrast: (
-    500: black,
-  )
-));
-
-$my-theme: mat.define-light-theme((
- color: (
-   primary: $my-primary,
-   accent: $my-accent,
- ),
- typography: mat.define-typography-config($font-family: $font-family),
-));
-
-@include mat.all-component-themes($my-theme);
-
-// Custom button styles
-.mat-raised-button.mat-primary {
-  background-color: $color-primary;
+// Botones personalizados
+.mat-mdc-raised-button.mat-primary {
+  background-color: var(--color-primary);
   color: white;
 }
 
-.mat-raised-button.mat-accent {
-  background-color: $color-accent;
+.mat-mdc-raised-button.mat-accent {
+  background-color: var(--color-accent);
   color: black;
 }
 
-// Success, warning, and error styles
+// Clases utilitarias
 .success {
-  color: $color-success;
+  color: var(--color-success);
 }
-
 .warning {
-  color: $color-warning;
+  color: var(--color-warning);
 }
-
 .error {
-  color: $color-error;
+  color: var(--color-error);
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
