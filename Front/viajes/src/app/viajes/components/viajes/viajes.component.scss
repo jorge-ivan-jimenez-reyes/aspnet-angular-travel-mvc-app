@@ -1,7 +1,31 @@
 .viajes-container {
   padding: 20px;
-  
+  max-width: 1200px;
+  margin: 0 auto;
+
   h1 {
     margin-bottom: 20px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #3f51b5;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.active {
+        color: #ff4081;
+      }
+    }
   }
 }
