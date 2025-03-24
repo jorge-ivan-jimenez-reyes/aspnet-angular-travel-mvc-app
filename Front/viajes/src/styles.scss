@@ -1,6 +1,19 @@
-@use 'custom-theme';
+:root {
+  --color-primary: #005792;
+  --color-secondary: #F5F7FA;
+  --color-accent: #FFCC00;
+  --color-success: #27AE60;
+  --color-warning: #F2994A;
+  --color-error: #EB5757;
+  --color-text-primary: #2C3E50;
+  --color-background: #FFFFFF; /* O #F2F2F2 si prefieres un fondo gris claro */
+}
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #FFFFFF;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
 }

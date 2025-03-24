@@ -1,16 +1,54 @@
 .viaje-list-container {
   padding: 20px;
+  background-color: var(--color-secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   h2 {
     margin-bottom: 20px;
+    color: var(--color-primary);
+    font-weight: 600;
   }
 
   button {
     margin-bottom: 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
 
   table {
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+
+    th {
+      background-color: var(--color-primary);
+      color: white;
+      padding: 12px;
+      text-align: left;
+    }
+
+    td {
+      background-color: white;
+      padding: 12px;
+    }
+
+    tr {
+      transition: box-shadow 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
   }
 
   .mat-column-acciones {
@@ -20,5 +58,6 @@
 
   .mat-icon-button {
     margin: 0 4px;
+    color: var(--color-primary);
   }
 }
