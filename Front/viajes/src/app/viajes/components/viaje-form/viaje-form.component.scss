@@ -1,12 +1,12 @@
 .viaje-form-container {
   padding: 2rem;
-  background-color: var(--color-background); // mejor que var(--color-secondary)
+  background-color: var(--color-background); // blanco (#ffffff)
   border-radius: 0.75rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 
   h2 {
     margin-bottom: 1.5rem;
-    color: var(--color-primary);
+    color: var(--color-primary); // verde azulado (#3c6e71)
     font-weight: 600;
     font-size: 1.75rem;
   }
@@ -22,7 +22,7 @@
       label {
         margin-bottom: 0.5rem;
         font-weight: 500;
-        color: var(--color-text-primary);
+        color: var(--color-text-primary); // gris oscuro (#353535)
         font-size: 0.95rem;
       }
 
@@ -31,15 +31,16 @@
       textarea {
         padding: 0.75rem 1rem;
         font-size: 1rem;
-        border: 1px solid #ccc;
+        border: 1px solid var(--color-surface); // gris claro (#d9d9d9)
         border-radius: 6px;
-        background-color: #fff;
+        background-color: var(--color-background);
+        color: var(--color-text-primary);
         transition: border 0.2s ease, box-shadow 0.2s ease;
 
         &:focus {
           outline: none;
-          border-color: var(--color-primary);
-          box-shadow: 0 0 0 3px rgba(0, 87, 146, 0.15);
+          border-color: var(--color-accent); // azul profundo (#284b63)
+          box-shadow: 0 0 0 3px rgba(60, 110, 113, 0.15); // con transparencia
         }
       }
     }
@@ -60,7 +61,7 @@
       transition: background-color 0.3s ease, filter 0.2s ease;
 
       &.submit {
-        background-color: var(--color-primary);
+        background-color: var(--color-primary); // verde azulado
         color: #fff;
 
         &:hover {
@@ -74,7 +75,7 @@
         border: 1px solid var(--color-text-primary);
 
         &:hover {
-          background-color: #f9f9f9;
+          background-color: var(--color-surface); // gris claro
         }
       }
     }
