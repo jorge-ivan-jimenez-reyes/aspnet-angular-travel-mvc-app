@@ -8,7 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="" />
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Update assembly informational version and refactor repository context">
+      <change beforePath="$PROJECT_DIR$/BackendTravel/Repositories/Interfaces/ITransporteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Repositories/Interfaces/ITransporteRepository.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -535,7 +537,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="entities" />
     <MESSAGE value="connection" />
     <MESSAGE value="clases" />
     <MESSAGE value="Transporte.cs" />
@@ -560,6 +561,7 @@
     <MESSAGE value="debug" />
     <MESSAGE value="i" />
     <MESSAGE value="b" />
-    <option name="LAST_COMMIT_MESSAGE" value="b" />
+    <MESSAGE value="Update assembly informational version and refactor repository context" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update assembly informational version and refactor repository context" />
   </component>
 </project>
