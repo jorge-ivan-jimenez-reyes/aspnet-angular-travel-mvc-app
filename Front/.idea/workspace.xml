@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/app/viajes/components/viaje-list/viaje-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/viajes/components/viaje-list/viaje-list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
       <updated>1742777708650</updated>
       <workItem from="1742777709902" duration="528000" />
       <workItem from="1742778251441" duration="2169000" />
-      <workItem from="1742798686585" duration="980000" />
+      <workItem from="1742798686585" duration="1233000" />
     </task>
     <task id="LOCAL-00001" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
       <option name="closed" value="true" />
@@ -220,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742799541445</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <option name="closed" value="true" />
+      <created>1742799671503</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1742799671503</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
