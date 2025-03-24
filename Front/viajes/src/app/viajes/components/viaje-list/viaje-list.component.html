@@ -2,37 +2,40 @@
 <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
 
 <div class="viaje-list-container">
-  <h2>Lista de Viajes</h2>
-  <p-toolbar>
-    <div class="p-toolbar-group-left">
-      <p-button label="Nuevo Viaje" icon="pi pi-plus" (onClick)="onNewViaje()"></p-button>
-    </div>
-  </p-toolbar>
-  
-  <p-table [value]="viajes" [tableStyle]="{'min-width': '50rem'}" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
-           currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} viajes" [rowsPerPageOptions]="[10,25,50]">
-    <ng-template pTemplate="header">
-      <tr>
-        <th pSortableColumn="id">ID <p-sortIcon field="id"></p-sortIcon></th>
-        <th pSortableColumn="destino">Destino <p-sortIcon field="destino"></p-sortIcon></th>
-        <th pSortableColumn="fechaInicio">Fecha de Inicio <p-sortIcon field="fechaInicio"></p-sortIcon></th>
-        <th pSortableColumn="fechaFin">Fecha de Fin <p-sortIcon field="fechaFin"></p-sortIcon></th>
-        <th pSortableColumn="presupuesto">Presupuesto <p-sortIcon field="presupuesto"></p-sortIcon></th>
-        <th>Acciones</th>
-      </tr>
+  <p-card>
+    <ng-template pTemplate="title">
+      <div class="p-d-flex p-jc-between p-ai-center">
+        <h2>Lista de Viajes</h2>
+        <p-button label="Nuevo Viaje" icon="pi pi-plus" (onClick)="onNewViaje()" styleClass="p-button-primary"></p-button>
+      </div>
     </ng-template>
-    <ng-template pTemplate="body" let-viaje>
-      <tr>
-        <td>{{viaje.id}}</td>
-        <td>{{viaje.destino}}</td>
-        <td>{{viaje.fechaInicio | date}}</td>
-        <td>{{viaje.fechaFin | date}}</td>
-        <td>{{viaje.presupuesto | currency}}</td>
-        <td>
-          <p-button icon="pi pi-pencil" (onClick)="onEditViaje(viaje)" styleClass="p-button-text p-button-rounded p-button-success"></p-button>
-          <p-button icon="pi pi-trash" (onClick)="onDeleteViaje(viaje)" styleClass="p-button-text p-button-rounded p-button-danger"></p-button>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
+    
+    <p-table [value]="viajes" [tableStyle]="{'min-width': '50rem'}" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+             currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} viajes" [rowsPerPageOptions]="[10,25,50]"
+             styleClass="p-datatable-striped">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id" style="width: 5%">ID <p-sortIcon field="id"></p-sortIcon></th>
+          <th pSortableColumn="destino" style="width: 25%">Destino <p-sortIcon field="destino"></p-sortIcon></th>
+          <th pSortableColumn="fechaInicio" style="width: 20%">Fecha de Inicio <p-sortIcon field="fechaInicio"></p-sortIcon></th>
+          <th pSortableColumn="fechaFin" style="width: 20%">Fecha de Fin <p-sortIcon field="fechaFin"></p-sortIcon></th>
+          <th pSortableColumn="presupuesto" style="width: 15%">Presupuesto <p-sortIcon field="presupuesto"></p-sortIcon></th>
+          <th style="width: 15%">Acciones</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-viaje>
+        <tr>
+          <td>{{viaje.id}}</td>
+          <td>{{viaje.destino}}</td>
+          <td>{{viaje.fechaInicio | date:'dd/MM/yyyy'}}</td>
+          <td>{{viaje.fechaFin | date:'dd/MM/yyyy'}}</td>
+          <td>{{viaje.presupuesto | currency:'USD':'symbol':'1.2-2'}}</td>
+          <td>
+            <p-button icon="pi pi-pencil" (onClick)="onEditViaje(viaje)" styleClass="p-button-text p-button-rounded p-button-success p-mr-2"></p-button>
+            <p-button icon="pi pi-trash" (onClick)="onDeleteViaje(viaje)" styleClass="p-button-text p-button-rounded p-button-danger"></p-button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
 </div>
