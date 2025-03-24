@@ -1,14 +1,23 @@
+<p-toast></p-toast>
+<p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+
 <div class="viaje-list-container">
   <h2>Lista de Viajes</h2>
-  <p-button label="Nuevo Viaje" icon="pi pi-plus" (onClick)="onNewViaje()"></p-button>
-  <p-table [value]="viajes" [tableStyle]="{'min-width': '50rem'}">
+  <p-toolbar>
+    <div class="p-toolbar-group-left">
+      <p-button label="Nuevo Viaje" icon="pi pi-plus" (onClick)="onNewViaje()"></p-button>
+    </div>
+  </p-toolbar>
+  
+  <p-table [value]="viajes" [tableStyle]="{'min-width': '50rem'}" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+           currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} viajes" [rowsPerPageOptions]="[10,25,50]">
     <ng-template pTemplate="header">
       <tr>
-        <th>ID</th>
-        <th>Destino</th>
-        <th>Fecha de Inicio</th>
-        <th>Fecha de Fin</th>
-        <th>Presupuesto</th>
+        <th pSortableColumn="id">ID <p-sortIcon field="id"></p-sortIcon></th>
+        <th pSortableColumn="destino">Destino <p-sortIcon field="destino"></p-sortIcon></th>
+        <th pSortableColumn="fechaInicio">Fecha de Inicio <p-sortIcon field="fechaInicio"></p-sortIcon></th>
+        <th pSortableColumn="fechaFin">Fecha de Fin <p-sortIcon field="fechaFin"></p-sortIcon></th>
+        <th pSortableColumn="presupuesto">Presupuesto <p-sortIcon field="presupuesto"></p-sortIcon></th>
         <th>Acciones</th>
       </tr>
     </ng-template>
@@ -20,8 +29,8 @@
         <td>{{viaje.fechaFin | date}}</td>
         <td>{{viaje.presupuesto | currency}}</td>
         <td>
-          <p-button icon="pi pi-pencil" (onClick)="onEditViaje(viaje)" styleClass="p-button-text"></p-button>
-          <p-button icon="pi pi-trash" (onClick)="onDeleteViaje(viaje)" styleClass="p-button-text p-button-danger"></p-button>
+          <p-button icon="pi pi-pencil" (onClick)="onEditViaje(viaje)" styleClass="p-button-text p-button-rounded p-button-success"></p-button>
+          <p-button icon="pi pi-trash" (onClick)="onDeleteViaje(viaje)" styleClass="p-button-text p-button-rounded p-button-danger"></p-button>
         </td>
       </tr>
     </ng-template>
