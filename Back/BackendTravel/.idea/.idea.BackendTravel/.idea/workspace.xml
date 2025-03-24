@@ -8,21 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Add repository services for Lugar, Transporte, and EstatusViaje">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/Data/ApplicationDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Data/ApplicationDBContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/bin/Debug/net8.0/BackendTravel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/BackendTravel.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/ref/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/ref/BackendTravel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/refint/BackendTravel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/obj/Debug/net8.0/refint/BackendTravel.dll" afterDir="false" />
-    </list>
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Enhance DbContext configuration with sensitive data logging and logging to console" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,31 +147,7 @@
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
       <workItem from="1742756140629" duration="14410000" />
-      <workItem from="1742775495080" duration="1668000" />
-    </task>
-    <task id="LOCAL-00010" summary="db context">
-      <option name="closed" value="true" />
-      <created>1742759299164</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1742759299164</updated>
-    </task>
-    <task id="LOCAL-00011" summary="entities">
-      <option name="closed" value="true" />
-      <created>1742760043336</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1742760043336</updated>
-    </task>
-    <task id="LOCAL-00012" summary="connection">
-      <option name="closed" value="true" />
-      <created>1742760372311</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1742760372311</updated>
+      <workItem from="1742775495080" duration="2007000" />
     </task>
     <task id="LOCAL-00013" summary="clases">
       <option name="closed" value="true" />
@@ -555,7 +517,31 @@
       <option name="project" value="LOCAL" />
       <updated>1742776394784</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Add seed data for EstatusViaje, Lugar, and Transporte entities">
+      <option name="closed" value="true" />
+      <created>1742777262248</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1742777262248</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Add migration to seed data for EstatusViaje, Lugar, and Transporte entities">
+      <option name="closed" value="true" />
+      <created>1742777269668</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1742777269668</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Enhance DbContext configuration with sensitive data logging and logging to console">
+      <option name="closed" value="true" />
+      <created>1742777438423</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1742777438423</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,9 +551,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="viajes" />
-    <MESSAGE value="v" />
-    <MESSAGE value="MappingProfile.cs" />
     <MESSAGE value="d" />
     <MESSAGE value="mapeo" />
     <MESSAGE value="fixin" />
@@ -590,6 +573,9 @@
     <MESSAGE value="V" />
     <MESSAGE value="Update assembly informational version and source link" />
     <MESSAGE value="Add repository services for Lugar, Transporte, and EstatusViaje" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add repository services for Lugar, Transporte, and EstatusViaje" />
+    <MESSAGE value="Add seed data for EstatusViaje, Lugar, and Transporte entities" />
+    <MESSAGE value="Add migration to seed data for EstatusViaje, Lugar, and Transporte entities" />
+    <MESSAGE value="Enhance DbContext configuration with sensitive data logging and logging to console" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance DbContext configuration with sensitive data logging and logging to console" />
   </component>
 </project>
