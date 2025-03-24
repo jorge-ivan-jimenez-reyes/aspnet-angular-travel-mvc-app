@@ -1,11 +1,10 @@
 :root {
-  --color-primary: #005792;
-  --color-secondary: #f5f7fa;
-  --color-accent: #ffcc00;
-  --color-text-primary: #2c3e50;
-  --color-background: #ffffff;
+  --color-primary: #00437a;       /* Azul profundo */
+  --color-secondary: #f2f4f8;     /* Gris claro neutro */
+  --color-background: #ffffff;    /* Blanco */
+  --color-text-primary: #333333;  /* Gris oscuro */
+  --color-accent: #ffa600;        /* Amarillo / color de énfasis */
 }
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
