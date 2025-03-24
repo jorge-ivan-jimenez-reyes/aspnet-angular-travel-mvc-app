@@ -21,23 +21,8 @@ import { ViajeFormComponent } from './viaje-form/viaje-form.component';
 
 @Component({
   selector: 'app-viajes',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatButtonModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatIconModule
-  ],
   templateUrl: 'viajes.component.html',
-  styleUrl: './viajes.component.scss'
+  styleUrls: ['./viajes.component.scss']
 })
 export class ViajesComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
