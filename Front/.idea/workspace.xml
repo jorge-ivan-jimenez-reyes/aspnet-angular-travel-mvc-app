@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="Update asset paths in angular.json and home.component.html for improved resource management; adjust workspace.xml for recent changes">
+    <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="Refactor styles in app.component.scss and styles.scss for improved readability and consistency; update home.component.html to enhance layout and user experience">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viajes/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/app/viajes/components/viaje-form/viaje-form.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/viajes/components/viaje-form/viaje-form.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viajes/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +75,7 @@
       <workItem from="1742777709902" duration="528000" />
       <workItem from="1742778251441" duration="2169000" />
       <workItem from="1742798686585" duration="2528000" />
-      <workItem from="1742843221565" duration="2609000" />
+      <workItem from="1742843221565" duration="2811000" />
     </task>
     <task id="LOCAL-00001" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
       <option name="closed" value="true" />
@@ -271,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742845179679</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Refactor styles in app.component.scss and styles.scss for improved readability and consistency; update home.component.html to enhance layout and user experience">
+      <option name="closed" value="true" />
+      <created>1742845909104</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1742845909104</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +287,7 @@
     <MESSAGE value="Update workspace configuration to enhance DbContext with sensitive data logging and console output" />
     <MESSAGE value="Refactor styles in viaje-form and viaje-list components for improved readability and maintainability" />
     <MESSAGE value="Update asset paths in angular.json and home.component.html for improved resource management; adjust workspace.xml for recent changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update asset paths in angular.json and home.component.html for improved resource management; adjust workspace.xml for recent changes" />
+    <MESSAGE value="Refactor styles in app.component.scss and styles.scss for improved readability and consistency; update home.component.html to enhance layout and user experience" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor styles in app.component.scss and styles.scss for improved readability and consistency; update home.component.html to enhance layout and user experience" />
   </component>
 </project>

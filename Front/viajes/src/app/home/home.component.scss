@@ -3,11 +3,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f7fc; // fondo suave pastel
+  background-color: var(--color-background); // Fondo suave pastel
 
   .content {
     text-align: center;
-    background-color: #ffffff; // tarjeta blanca
+    background-color: var(--color-surface); // Tarjeta blanca
     padding: 3rem 2.5rem;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
@@ -23,14 +23,14 @@
 
     h1 {
       font-size: 2rem;
-      color: #2c3e50; // texto principal
+      color: var(--color-text-primary);
       font-weight: 600;
       margin-bottom: 0.75rem;
     }
 
     p {
       font-size: 1.1rem;
-      color: #555f77; // gris para subtítulos
+      color: var(--color-text-secondary);
       margin-bottom: 2rem;
     }
 
@@ -38,68 +38,15 @@
       padding: 0.75rem 2rem;
       font-size: 1rem;
       font-weight: 500;
-      background-color: #1976d2; // azul PrimeNG
-      color: #fff;.home-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f4f7fc; // fondo suave pastel
-
-      .content {
-        text-align: center;
-        background-color: #ffffff; // tarjeta blanca
-        padding: 3rem 2.5rem;
-        border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-        max-width: 480px;
-        width: 90%;
-
-        .logo {
-          width: 130px;
-          height: auto;
-          margin-bottom: 1.5rem;
-          filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
-        }
-
-        h1 {
-          font-size: 2rem;
-          color: #2c3e50; // texto principal
-          font-weight: 600;
-          margin-bottom: 0.75rem;
-        }
-
-        p {
-          font-size: 1.1rem;
-          color: #555f77; // gris para subtítulos
-          margin-bottom: 2rem;
-        }
-
-        button {
-          padding: 0.75rem 2rem;
-          font-size: 1rem;
-          font-weight: 500;
-          background-color: #1976d2; // azul PrimeNG
-          color: #fff;
-          border: none;
-          border-radius: 6px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-
-          &:hover {
-            background-color: #1565c0;
-          }
-        }
-      }
-    }
-
+      background-color: var(--color-button-primary);
+      color: #fff;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #1565c0;
+        background-color: var(--color-button-hover);
       }
     }
   }

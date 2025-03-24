@@ -1,12 +1,12 @@
 .viaje-form-container {
   padding: 2rem;
-  background-color: var(--color-background); // blanco
+  background-color: var(--color-background); // Blanco
   border-radius: 0.75rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 
   h2 {
     margin-bottom: 1.5rem;
-    color: var(--color-primary); // verde azulado sobrio
+    color: var(--color-primary); // Verde azulado sobrio
     font-weight: 600;
     font-size: 1.75rem;
   }
@@ -22,7 +22,7 @@
       label {
         margin-bottom: 0.5rem;
         font-weight: 500;
-        color: var(--color-text-primary); // gris oscuro legible
+        color: var(--color-text-primary); // Gris oscuro
         font-size: 0.95rem;
       }
 
@@ -31,16 +31,16 @@
       textarea {
         padding: 0.75rem 1rem;
         font-size: 1rem;
-        border: 1px solid var(--color-border); // borde sutil
+        border: 1px solid var(--color-border); // Borde sutil
         border-radius: 6px;
-        background-color: var(--color-background); // blanco
-        color: var(--color-text-primary); // texto oscuro
+        background-color: var(--color-background); // Fondo blanco
+        color: var(--color-text-primary);
         transition: border 0.2s ease, box-shadow 0.2s ease;
 
         &:focus {
           outline: none;
-          border-color: var(--color-accent); // azul profundo
-          box-shadow: 0 0 0 3px rgba(40, 75, 99, 0.15);
+          border-color: var(--color-accent); // Azul profundo
+          box-shadow: 0 0 0 3px rgba(40, 75, 99, 0.15); // Sombra suave
         }
       }
     }
@@ -75,7 +75,7 @@
         border: 1px solid var(--color-text-primary);
 
         &:hover {
-          background-color: var(--color-muted); // gris muy claro
+          background-color: var(--color-muted); // Fondo gris claro
         }
       }
     }

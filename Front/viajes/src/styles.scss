@@ -1,20 +1,12 @@
 :root {
-  /* PALETA BASE CLARA */
-  --color-background: #ffffff;       /* Fondo principal */
-  --color-surface: #f5f7fa;          /* Tarjetas, contenedores */
-  --color-muted: #f0f0f0;            /* Hover, fondos suaves */
-  --color-border: #e0e0e0;           /* Bordes sutiles */
-
-  /* PALETA PRINCIPAL */
-  --color-primary: #3c6e71;          /* Verde azulado suave */
-  --color-accent: #284b63;           /* Azul refinado para énfasis */
-  --color-text-primary: #353535;     /* Gris oscuro legible */
-
-  /* SEMÁNTICOS */
-  --color-success: #27ae60;
-  --color-warning: #f2994a;
-  --color-error: #eb5757;
+  --color-background: #f4f7fc;       // Fondo suave pastel
+  --color-surface: #ffffff;          // Tarjetas blancas
+  --color-text-primary: #2c3e50;     // Texto principal oscuro
+  --color-text-secondary: #555f77;   // Subtítulo gris azulado
+  --color-button-primary: #1976d2;   // Azul PrimeNG
+  --color-button-hover: #1565c0;     // Azul más oscuro
 }
+
 
 /* BASE GENERAL */
 body {
