@@ -60,14 +60,23 @@ export class ViajeListComponent implements OnInit {
   }
 
   loadLugares(): void {
-    this.catalogoService.getLugares().subscribe(
-      (lugares) => {
+    this.catalogoService.getLugares().subscribe({
+      next: (lugares) => {
         lugares.forEach(lugar => {
           this.lugares[lugar.id] = lugar;
         });
       },
-      (error) => this.handleError('Error fetching lugares', error)
-    );
+      error: (error) => {
+        console.error('Error in loadLugares:', error);
+        if (error.error instanceof ErrorEvent) {
+          // Client-side or network error
+          this.handleError('Error fetching lugares: ' + error.error.message, error);
+        } else {
+          // Backend error
+          this.handleError(`Error fetching lugares: ${error.status} ${error.statusText}`, error);
+        }
+      }
+    });
   }
 
   onNewViaje(): void {
@@ -129,7 +138,11 @@ export class ViajeListComponent implements OnInit {
 
   private handleError(message: string, error: any): void {
     console.error(message, error);
-    this.messageService.add({severity:'error', summary: 'Error', detail: message});
+    let errorDetail = message;
+    if (error.error && typeof error.error === 'string') {
+      errorDetail += ' ' + error.error;
+    }
+    this.messageService.add({severity:'error', summary: 'Error', detail: errorDetail});
     this.loading = false;
   }
 }

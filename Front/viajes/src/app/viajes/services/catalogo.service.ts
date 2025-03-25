@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, map, catchError } from 'rxjs';
 import { Lugar } from '../models/lugar.model';
 import { EstatusViaje } from '../models/estatus-viaje.model';
 import { Transporte } from '../models/transporte.model';
@@ -15,7 +15,13 @@ export class CatalogoService {
   constructor(private http: HttpClient) { }
 
   getLugares(): Observable<Lugar[]> {
-    return this.http.get<Lugar[]>(`${this.apiUrl}/api/Lugares`);
+    return this.http.get<Lugar[]>(`${this.apiUrl}/api/Lugares`).pipe(
+      catchError((error) => {
+        console.error('Error in getLugares:', error);
+        console.log('Response:', error.error);
+        throw error;
+      })
+    );
   }
 
   getEstatusViajes(): Observable<EstatusViaje[]> {
