@@ -151,7 +151,10 @@ button:hover,
 }
 
 
-
+/* Ensure p-inputNumber has the same light background */
+.p-inputnumber .p-inputtext {
+  background-color: var(--p-inputtext-background) !important;
+}
 .p-select-overlay {
   background-color: #f8f9fa;
   z-index: 1000;
