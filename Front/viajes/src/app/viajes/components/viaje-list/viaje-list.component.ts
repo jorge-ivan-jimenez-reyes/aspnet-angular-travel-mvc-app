@@ -5,6 +5,7 @@ import { ViajeService } from '../../services/viaje.service';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { CatalogoService } from '../../services/catalogo.service';
+import { Lugar } from '../../models/lugar.model';
 
 @Component({
   selector: 'app-viaje-list',
@@ -19,6 +20,7 @@ export class ViajeListComponent implements OnInit {
   loading: boolean = true;
   estatusNombres: { [key: number]: string } = {};
   estatusOptions: any[] = [];
+  lugares: { [key: number]: Lugar } = {};
 
   constructor(
     private router: Router,
@@ -31,6 +33,7 @@ export class ViajeListComponent implements OnInit {
   ngOnInit(): void {
     this.loadViajes();
     this.loadEstatusNombres();
+    this.loadLugares();
   }
 
   loadViajes(): void {
@@ -40,11 +43,7 @@ export class ViajeListComponent implements OnInit {
         this.viajes = viajes;
         this.loading = false;
       },
-      (error) => {
-        console.error('Error fetching viajes:', error);
-        this.messageService.add({severity:'error', summary: 'Error', detail: 'No se pudieron cargar los viajes'});
-        this.loading = false;
-      }
+      (error) => this.handleError('Error fetching viajes', error)
     );
   }
 
@@ -56,9 +55,18 @@ export class ViajeListComponent implements OnInit {
           this.estatusOptions.push({ label: estatus.nombre, value: estatus.id });
         });
       },
-      (error) => {
-        console.error('Error fetching estatus viajes:', error);
-      }
+      (error) => this.handleError('Error fetching estatus viajes', error)
+    );
+  }
+
+  loadLugares(): void {
+    this.catalogoService.getLugares().subscribe(
+      (lugares) => {
+        lugares.forEach(lugar => {
+          this.lugares[lugar.id] = lugar;
+        });
+      },
+      (error) => this.handleError('Error fetching lugares', error)
     );
   }
 
@@ -76,7 +84,7 @@ export class ViajeListComponent implements OnInit {
       return;
     }
     this.confirmationService.confirm({
-      message: `¿Estás seguro de que quieres eliminar el viaje a ${viaje.destino || 'destino desconocido'}?`,
+      message: `¿Estás seguro de que quieres eliminar el viaje "${viaje.nombre || 'Sin nombre'}" de ${this.getLugarNombre(viaje.origenId)} a ${this.getLugarNombre(viaje.destinoId)}?`,
       header: 'Confirmar eliminación',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
@@ -85,10 +93,7 @@ export class ViajeListComponent implements OnInit {
             this.loadViajes(); // Reload the list after deletion
             this.messageService.add({severity:'success', summary: 'Éxito', detail: 'Viaje eliminado correctamente'});
           },
-          (error) => {
-            console.error('Error deleting viaje:', error);
-            this.messageService.add({severity:'error', summary: 'Error', detail: 'No se pudo eliminar el viaje'});
-          }
+          (error) => this.handleError('Error deleting viaje', error)
         );
       }
     });
@@ -102,11 +107,15 @@ export class ViajeListComponent implements OnInit {
     return this.estatusNombres[estatusId] || 'Desconocido';
   }
 
-  getEstatusColor(estatusId: number): 'success' | 'info' | 'warn' | 'danger' {
+  getLugarNombre(lugarId: number): string {
+    return this.lugares[lugarId]?.nombre || 'Desconocido';
+  }
+
+  getEstatusColor(estatusId: number): 'success' | 'info' | 'warning' | 'danger' {
     const estatus = this.getEstatusNombre(estatusId).toLowerCase();
     switch (estatus) {
       case 'pendiente':
-        return 'warn';
+        return 'warning';
       case 'en progreso':
         return 'info';
       case 'completado':
@@ -116,5 +125,11 @@ export class ViajeListComponent implements OnInit {
       default:
         return 'info';
     }
+  }
+
+  private handleError(message: string, error: any): void {
+    console.error(message, error);
+    this.messageService.add({severity:'error', summary: 'Error', detail: message});
+    this.loading = false;
   }
 }

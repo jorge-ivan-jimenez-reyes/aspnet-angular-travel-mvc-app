@@ -31,13 +31,15 @@ export class ViajeFormComponent implements OnInit {
     private messageService: MessageService
   ) {
     this.viajeForm = this.fb.group({
-      destino: ['', Validators.required],
+      nombre: ['', Validators.required],
       fechaInicio: ['', Validators.required],
       fechaFin: ['', Validators.required],
-      presupuesto: ['', [Validators.required, Validators.min(0)]],
-      lugarId: ['', Validators.required],
+      origenId: ['', Validators.required],
+      destinoId: ['', Validators.required],
+      transporteId: ['', Validators.required],
       estatusId: ['', Validators.required],
-      transporteId: ['', Validators.required]
+      costo: ['', [Validators.required, Validators.min(0)]],
+      descripcion: ['']
     });
   }
 
@@ -57,15 +59,15 @@ export class ViajeFormComponent implements OnInit {
   loadCatalogos(): void {
     this.catalogoService.getLugares().subscribe(
       (lugares) => this.lugares = lugares,
-      (error) => console.error('Error fetching lugares:', error)
+      (error) => this.handleError('Error fetching lugares', error)
     );
     this.catalogoService.getEstatusViajes().subscribe(
       (estatusViajes) => this.estatusViajes = estatusViajes,
-      (error) => console.error('Error fetching estatus viajes:', error)
+      (error) => this.handleError('Error fetching estatus viajes', error)
     );
     this.catalogoService.getTransportes().subscribe(
       (transportes) => this.transportes = transportes,
-      (error) => console.error('Error fetching transportes:', error)
+      (error) => this.handleError('Error fetching transportes', error)
     );
   }
 
@@ -74,10 +76,7 @@ export class ViajeFormComponent implements OnInit {
       (viaje) => {
         this.viajeForm.patchValue(viaje);
       },
-      (error) => {
-        console.error('Error fetching viaje:', error);
-        this.messageService.add({severity:'error', summary: 'Error', detail: 'No se pudo cargar el viaje'});
-      }
+      (error) => this.handleError('Error fetching viaje', error)
     );
   }
 
@@ -88,28 +87,26 @@ export class ViajeFormComponent implements OnInit {
         const id = this.route.snapshot.paramMap.get('id');
         if (id) {
           this.viajeService.updateViaje(+id, viaje).subscribe(
-            () => {
-              this.messageService.add({severity:'success', summary: 'Éxito', detail: 'Viaje actualizado correctamente'});
-              this.router.navigate(['/viajes']);
-            },
-            (error) => {
-              console.error('Error updating viaje:', error);
-              this.messageService.add({severity:'error', summary: 'Error', detail: 'No se pudo actualizar el viaje'});
-            }
+            () => this.handleSuccess('Viaje actualizado correctamente'),
+            (error) => this.handleError('Error updating viaje', error)
           );
         }
       } else {
         this.viajeService.createViaje(viaje).subscribe(
-          () => {
-            this.messageService.add({severity:'success', summary: 'Éxito', detail: 'Viaje creado correctamente'});
-            this.router.navigate(['/viajes']);
-          },
-          (error) => {
-            console.error('Error creating viaje:', error);
-            this.messageService.add({severity:'error', summary: 'Error', detail: 'No se pudo crear el viaje'});
-          }
+          () => this.handleSuccess('Viaje creado correctamente'),
+          (error) => this.handleError('Error creating viaje', error)
         );
       }
     }
+  }
+
+  private handleSuccess(message: string): void {
+    this.messageService.add({severity:'success', summary: 'Éxito', detail: message});
+    this.router.navigate(['/viajes']);
+  }
+
+  private handleError(message: string, error: any): void {
+    console.error(message, error);
+    this.messageService.add({severity:'error', summary: 'Error', detail: message});
   }
 }
