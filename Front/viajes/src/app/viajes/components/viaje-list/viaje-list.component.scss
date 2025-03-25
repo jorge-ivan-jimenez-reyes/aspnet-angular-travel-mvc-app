@@ -2,13 +2,9 @@
   .viaje-list-container {
     background-color: var(--color-surface);
     width: 100%;
-    max-width: 1400px;
+    max-width: 100%;
     margin: 0 auto;
-  }
-
-  .p-card {
-    background-color: var(--color-surface);
-    border: none;
+    padding: 1rem;
   }
 
   .p-datatable {
@@ -21,16 +17,16 @@
       padding: 1rem;
       border-bottom: 1px solid var(--color-border-light);
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     .p-datatable-thead > tr > th {
       background-color: var(--color-surface);
       color: var(--color-text-primary);
       border-color: var(--color-border-light);
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      padding: 0.75rem 1rem;
+      padding: 1rem;
     }
 
     .p-datatable-tbody > tr {
@@ -39,7 +35,12 @@
       > td {
         border-color: var(--color-border-light);
         color: var(--color-text-primary);
-        padding: 0.75rem 1rem;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+
+      &:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.02);
       }
     }
 
@@ -75,21 +76,22 @@
       padding: 0.4rem 0.75rem;
     }
 
-    &.p-button-primary {
-      background-color: var(--color-primary);
-      border-color: var(--color-primary);
-      color: #fff;
-    }
+    &.p-button-text {
+      border: none;
+      background-color: transparent;
 
-    &.p-button-secondary {
-      background-color: var(--color-muted);
-      border-color: var(--color-muted);
-      color: var(--color-text-primary);
+      &.p-button-success {
+        color: var(--color-success);
+      }
+
+      &.p-button-danger {
+        color: var(--color-error);
+      }
     }
   }
 
   .p-tag {
-    padding: 0.2rem 0.5rem;
+    padding: 0.3rem 0.6rem;
     font-weight: 500;
     font-size: 0.9rem;
   }
@@ -117,10 +119,27 @@
     }
   }
 
-  // Hide the paginator bar
-  .custom-paginator-table {
-    .p-paginator {
-      display: none;
+  // Show a minimalist paginator
+  .p-paginator {
+    background-color: var(--color-surface);
+    border: none;
+    padding: 1rem 0;
+
+    .p-paginator-element {
+      color: var(--color-text-primary);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      margin: 0 0.2rem;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      &.p-highlight {
+        background-color: var(--color-primary);
+        color: #ffffff;
+        border-color: var(--color-primary);
+      }
     }
   }
 }
