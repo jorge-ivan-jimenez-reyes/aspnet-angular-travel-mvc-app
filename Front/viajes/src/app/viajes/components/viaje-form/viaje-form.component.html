@@ -3,59 +3,58 @@
   <h2>{{ isEditing ? 'Editar' : 'Nuevo' }} Viaje</h2>
   <form [formGroup]="viajeForm" (ngSubmit)="onSubmit()">
 <div class="p-field">
-  <label for="origen">Origen</label>
-  <input id="origen" type="text" pInputText formControlName="origen" required>
-  <small *ngIf="viajeForm.get('origen')?.hasError('required') && viajeForm.get('origen')?.touched" class="p-error">El origen es requerido</small>
+  <label for="nombre">Nombre del Viaje</label>
+  <input id="nombre" type="text" pInputText formControlName="nombre" required>
+  <small *ngIf="viajeForm.get('nombre')?.hasError('required') && viajeForm.get('nombre')?.touched" class="p-error">El nombre es requerido</small>
 </div>
 
 <div class="p-field">
-  <label for="destino">Destino (lugar donde termina el viaje)</label>
-  <input id="destino" type="text" pInputText formControlName="destino" required>
-  <small *ngIf="viajeForm.get('destino')?.hasError('required') && viajeForm.get('destino')?.touched" class="p-error">El destino es requerido</small>
+  <label for="origenId">Origen</label>
+  <p-dropdown id="origenId" [options]="lugares" formControlName="origenId" optionLabel="nombre" optionValue="id" [filter]="true" filterBy="nombre" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-text-primary)'}"></p-dropdown>
+  <small *ngIf="viajeForm.get('origenId')?.hasError('required') && viajeForm.get('origenId')?.touched" class="p-error">El origen es requerido</small>
 </div>
 
 <div class="p-field">
-  <label for="fechaHoraInicio">Fecha y Hora de Inicio Programado</label>
-  <p-calendar id="fechaHoraInicio" formControlName="fechaHoraInicio" [showTime]="true" [showSeconds]="true" dateFormat="dd/mm/yy" inputId="timeonly" required></p-calendar>
-  <small *ngIf="viajeForm.get('fechaHoraInicio')?.hasError('required') && viajeForm.get('fechaHoraInicio')?.touched" class="p-error">La fecha y hora de inicio son requeridas</small>
+  <label for="destinoId">Destino</label>
+  <p-dropdown id="destinoId" [options]="lugares" formControlName="destinoId" optionLabel="nombre" optionValue="id" [filter]="true" filterBy="nombre" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-text-primary)'}"></p-dropdown>
+  <small *ngIf="viajeForm.get('destinoId')?.hasError('required') && viajeForm.get('destinoId')?.touched" class="p-error">El destino es requerido</small>
 </div>
 
 <div class="p-field">
-  <label for="fechaHoraFin">Fecha y Hora de Fin Programado</label>
-  <p-calendar id="fechaHoraFin" formControlName="fechaHoraFin" [showTime]="true" [showSeconds]="true" dateFormat="dd/mm/yy" inputId="timeonly" required></p-calendar>
-  <small *ngIf="viajeForm.get('fechaHoraFin')?.hasError('required') && viajeForm.get('fechaHoraFin')?.touched" class="p-error">La fecha y hora de fin son requeridas</small>
+  <label for="fechaInicio">Fecha de Inicio</label>
+  <p-calendar id="fechaInicio" formControlName="fechaInicio" dateFormat="dd/mm/yy" [showIcon]="true" required></p-calendar>
+  <small *ngIf="viajeForm.get('fechaInicio')?.hasError('required') && viajeForm.get('fechaInicio')?.touched" class="p-error">La fecha de inicio es requerida</small>
 </div>
 
 <div class="p-field">
-  <label for="operador">Operador</label>
-  <input id="operador" type="text" pInputText formControlName="operador" required>
-  <small *ngIf="viajeForm.get('operador')?.hasError('required') && viajeForm.get('operador')?.touched" class="p-error">El operador es requerido</small>
+  <label for="fechaFin">Fecha de Fin</label>
+  <p-calendar id="fechaFin" formControlName="fechaFin" dateFormat="dd/mm/yy" [showIcon]="true" required></p-calendar>
+  <small *ngIf="viajeForm.get('fechaFin')?.hasError('required') && viajeForm.get('fechaFin')?.touched" class="p-error">La fecha de fin es requerida</small>
 </div>
 
-    <div class="p-field">
-      <label for="presupuesto">Presupuesto</label>
-      <p-inputNumber id="presupuesto" formControlName="presupuesto" [min]="0" mode="currency" currency="USD" locale="en-US" required class="{'background-color': '#ffffff', 'color': 'var(--color-background)'}"></p-inputNumber>
-      <small *ngIf="viajeForm.get('presupuesto')?.hasError('required') && viajeForm.get('presupuesto')?.touched" class="p-error">El presupuesto es requerido</small>
-      <small *ngIf="viajeForm.get('presupuesto')?.hasError('min') && viajeForm.get('presupuesto')?.touched" class="p-error">El presupuesto debe ser mayor o igual a 0</small>
-    </div>
+<div class="p-field">
+  <label for="costo">Costo</label>
+  <p-inputNumber id="costo" formControlName="costo" [min]="0" mode="currency" currency="USD" locale="en-US" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-background)'}"></p-inputNumber>
+  <small *ngIf="viajeForm.get('costo')?.hasError('required') && viajeForm.get('costo')?.touched" class="p-error">El costo es requerido</small>
+  <small *ngIf="viajeForm.get('costo')?.hasError('min') && viajeForm.get('costo')?.touched" class="p-error">El costo debe ser mayor o igual a 0</small>
+</div>
 
-    <div class="p-field">
-      <label for="lugarId">Lugar</label>
-      <p-dropdown id="lugarId" [options]="lugares" formControlName="lugarId" optionLabel="nombre" optionValue="id" [filter]="true" filterBy="nombre" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-text-primary)'}"></p-dropdown>
-      <small *ngIf="viajeForm.get('lugarId')?.hasError('required') && viajeForm.get('lugarId')?.touched" class="p-error">El lugar es requerido</small>
-    </div>
+<div class="p-field">
+  <label for="descripcion">Descripción</label>
+  <textarea id="descripcion" pInputTextarea formControlName="descripcion" rows="3"></textarea>
+</div>
 
-    <div class="p-field">
-      <label for="estatusId">Estatus</label>
-      <p-dropdown id="estatusId" [options]="estatusViajes" formControlName="estatusId" optionLabel="nombre" optionValue="id" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-text-primary)'}"></p-dropdown>
-      <small *ngIf="viajeForm.get('estatusId')?.hasError('required') && viajeForm.get('estatusId')?.touched" class="p-error">El estatus es requerido</small>
-    </div>
+<div class="p-field">
+  <label for="estatusId">Estatus</label>
+  <p-dropdown id="estatusId" [options]="estatusViajes" formControlName="estatusId" optionLabel="nombre" optionValue="id" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-text-primary)'}"></p-dropdown>
+  <small *ngIf="viajeForm.get('estatusId')?.hasError('required') && viajeForm.get('estatusId')?.touched" class="p-error">El estatus es requerido</small>
+</div>
 
-    <div class="p-field">
-      <label for="transporteId">Transporte</label>
-      <p-dropdown id="transporteId" [options]="transportes" formControlName="transporteId" optionLabel="nombre" optionValue="id" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-text-primary)'}"></p-dropdown>
-      <small *ngIf="viajeForm.get('transporteId')?.hasError('required') && viajeForm.get('transporteId')?.touched" class="p-error">El transporte es requerido</small>
-    </div>
+<div class="p-field">
+  <label for="transporteId">Transporte</label>
+  <p-dropdown id="transporteId" [options]="transportes" formControlName="transporteId" optionLabel="nombre" optionValue="id" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-text-primary)'}"></p-dropdown>
+  <small *ngIf="viajeForm.get('transporteId')?.hasError('required') && viajeForm.get('transporteId')?.touched" class="p-error">El transporte es requerido</small>
+</div>
 
     <div class="form-actions">
       <p-button type="submit" label="Guardar" [disabled]="!viajeForm.valid"></p-button>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Viaje } from '../../models/viaje.model';
@@ -15,7 +15,7 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./viaje-form.component.scss'],
   providers: [MessageService]
 })
-export class ViajeFormComponent implements OnInit {
+export class ViajeFormComponent implements OnInit, AfterViewInit {
   viajeForm: FormGroup;
   isEditing: boolean = false;
   lugares: Lugar[] = [];
@@ -28,24 +28,20 @@ export class ViajeFormComponent implements OnInit {
     private router: Router,
     private viajeService: ViajeService,
     private catalogoService: CatalogoService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private cdr: ChangeDetectorRef
   ) {
     this.viajeForm = this.fb.group({
-      origen: ['', Validators.required],
-      destino: ['', Validators.required],
-      fechaHoraInicio: ['', Validators.required],
-      fechaHoraFin: ['', Validators.required],
-      operador: ['', Validators.required],
-      presupuesto: ['', [Validators.required, Validators.min(0)]],
-      lugarId: ['', Validators.required],
-      transporteId: ['', Validators.required],
-      estatusId: ['', Validators.required],
+      nombre: ['', Validators.required],
+      fechaInicio: ['', Validators.required],
+      fechaFin: ['', Validators.required],
+      origenId: [null, Validators.required],
+      destinoId: [null, Validators.required],
+      transporteId: [null, Validators.required],
+      estatusId: [null, Validators.required],
+      costo: [0, [Validators.required, Validators.min(0)]],
       descripcion: ['']
     });
-  }
-
-  navigateToViajes(): void {
-    this.router.navigate(['/viajes']);
   }
 
   ngOnInit(): void {
@@ -55,6 +51,18 @@ export class ViajeFormComponent implements OnInit {
       this.isEditing = true;
       this.loadViaje(+id);
     }
+  }
+
+  ngAfterViewInit(): void {
+    // Ensure the view is fully rendered before interacting with the DOM
+    if (typeof document !== 'undefined') {
+      // Your initialization logic here, if needed
+      this.cdr.detectChanges();
+    }
+  }
+
+  navigateToViajes(): void {
+    this.router.navigate(['/viajes']);
   }
 
   loadCatalogos(): void {
@@ -76,6 +84,7 @@ export class ViajeFormComponent implements OnInit {
     this.viajeService.getViajeById(id).subscribe(
       (viaje) => {
         this.viajeForm.patchValue(viaje);
+        this.cdr.detectChanges();
       },
       (error) => this.handleError('Error fetching viaje', error)
     );
@@ -98,6 +107,7 @@ export class ViajeFormComponent implements OnInit {
           (error) => this.handleError('Error creating viaje', error)
         );
       }
+      console.log('Form:', this.viajeForm.value);
     }
   }
 

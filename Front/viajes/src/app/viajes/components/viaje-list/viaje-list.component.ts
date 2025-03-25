@@ -40,8 +40,10 @@ export class ViajeListComponent implements OnInit {
     this.loading = true;
     this.viajeService.getViajes().subscribe({
       next: (viajes) => {
+        console.log('Viajes received:', viajes);
         this.viajes = viajes;
         this.loading = false;
+        console.log('Viajes array after assignment:', this.viajes);
       },
       error: (error) => {
         this.handleError('Error fetching viajes', error);
@@ -100,7 +102,7 @@ export class ViajeListComponent implements OnInit {
       return;
     }
     this.confirmationService.confirm({
-      message: `¿Estás seguro de que quieres eliminar el viaje "${viaje.nombre || 'Sin nombre'}" de ${this.getLugarNombre(viaje.origenId)} a ${this.getLugarNombre(viaje.destinoId)}?`,
+      message: `¿Estás seguro de que quieres eliminar el viaje "${viaje.nombre}" (ID: ${viaje.id})?`,
       header: 'Confirmar eliminación',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
@@ -123,8 +125,12 @@ export class ViajeListComponent implements OnInit {
     return this.estatusNombres[estatusId] || 'Desconocido';
   }
 
-  getLugarNombre(lugarId: number): string {
-    return this.lugares[lugarId]?.nombre || 'Desconocido';
+  getLugarNombre(lugar: string | number): string {
+    if (typeof lugar === 'string') {
+      return lugar || 'Desconocido';
+    } else {
+      return this.lugares[lugar]?.nombre || 'Desconocido';
+    }
   }
 
   getEstatusColor(estatusId: number): 'success' | 'info' | 'warn' | 'danger' {
