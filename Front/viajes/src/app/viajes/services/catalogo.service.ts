@@ -4,25 +4,26 @@ import { Observable, map } from 'rxjs';
 import { Lugar } from '../models/lugar.model';
 import { EstatusViaje } from '../models/estatus-viaje.model';
 import { Transporte } from '../models/transporte.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CatalogoService {
-  private apiUrl = 'http://localhost:5000/api'; // Adjust this URL to match your backend API
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
   getLugares(): Observable<Lugar[]> {
-    return this.http.get<Lugar[]>(`${this.apiUrl}/lugares`);
+    return this.http.get<Lugar[]>(`${this.apiUrl}/api/Lugares`);
   }
 
   getEstatusViajes(): Observable<EstatusViaje[]> {
-    return this.http.get<EstatusViaje[]>(`${this.apiUrl}/estatus-viajes`);
+    return this.http.get<EstatusViaje[]>(`${this.apiUrl}/api/EstatusViaje`);
   }
 
   getTransportes(): Observable<Transporte[]> {
-    return this.http.get<Transporte[]>(`${this.apiUrl}/transportes`);
+    return this.http.get<Transporte[]>(`${this.apiUrl}/api/Transportes`);
   }
 
   getEstatusNombre(estatusId: number): Observable<string> {

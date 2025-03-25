@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Viaje } from '../models/viaje.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ViajeService {
-  private apiUrl = 'http://localhost:5000/api/viajes'; // Adjust this URL to match your backend API
+  private apiUrl = `${environment.apiUrl}/api/Viajes`;
 
   constructor(private http: HttpClient) { }
 
@@ -23,8 +24,8 @@ export class ViajeService {
     return this.http.post<Viaje>(this.apiUrl, viaje);
   }
 
-  updateViaje(id: number, viaje: Viaje): Observable<Viaje> {
-    return this.http.put<Viaje>(`${this.apiUrl}/${id}`, viaje);
+  updateViaje(id: number, viaje: Viaje): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${id}`, viaje);
   }
 
   deleteViaje(id: number): Observable<void> {
