@@ -21,9 +21,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost4200", policy =>
+    options.AddPolicy("AllowLocalhost", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.WithOrigins("http://localhost:4200", "http://localhost")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -53,7 +53,7 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseCors("AllowLocalhost4200");
+app.UseCors("AllowLocalhost");
 
 app.UseRouting();
 
