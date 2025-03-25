@@ -16,6 +16,16 @@
   --color-success: #27ae60;
   --color-warning: #f2994a;
   --color-error: #eb5757;
+
+  /* PrimeNG custom variables */
+  --p-select-option-focus-bg: var(--color-primary-light);
+  --p-select-option-focus-color: var(--color-surface);
+}
+
+/* PrimeNG overrides */
+.p-select-option:not(.p-select-option-selected):not(.p-disabled).p-focus {
+  background: var(--p-select-option-focus-bg);
+  color: var(--p-select-option-focus-color);
 }
 
 /* RESET Y ESTILOS BASE */
