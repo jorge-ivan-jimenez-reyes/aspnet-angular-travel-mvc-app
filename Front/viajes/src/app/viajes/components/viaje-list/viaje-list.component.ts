@@ -38,13 +38,20 @@ export class ViajeListComponent implements OnInit {
 
   loadViajes(): void {
     this.loading = true;
-    this.viajeService.getViajes().subscribe(
-      (viajes) => {
+    this.viajeService.getViajes().subscribe({
+      next: (viajes) => {
         this.viajes = viajes;
         this.loading = false;
       },
-      (error) => this.handleError('Error fetching viajes', error)
-    );
+      error: (error) => {
+        this.handleError('Error fetching viajes', error);
+        this.loading = false;
+      }
+    });
+  }
+
+  onGlobalFilter(table: Table, event: Event) {
+    table.filterGlobal((event.target as HTMLInputElement).value, 'contains');
   }
 
   loadEstatusNombres(): void {

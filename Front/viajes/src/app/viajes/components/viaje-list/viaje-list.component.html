@@ -1,8 +1,9 @@
 <div class="viaje-list-container">
+  <h2>Lista de Viajes</h2>
   <div class="table-header">
     <span class="p-input-icon-left search-input">
       <i class="pi pi-search"></i>
-      <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Buscar viaje" />
+      <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Buscar viaje" />
     </span>
     <p-button label="Nuevo Viaje" icon="pi pi-plus" styleClass="p-button-success" (onClick)="onNewViaje()"></p-button>
   </div>
@@ -15,30 +16,33 @@
     [loading]="loading"
     [globalFilterFields]="['destino', 'fechaInicio', 'fechaFin', 'presupuesto', 'lugarId', 'estatusId', 'transporteId']"
     styleClass="custom-paginator-table larger-components"
+    [rowHover]="true"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} viajes"
   >
     <ng-template pTemplate="header">
       <tr>
-        <th pSortableColumn="destino">
+        <th pSortableColumn="destino" style="width: 20%">
           Destino
           <p-sortIcon field="destino"></p-sortIcon>
           <p-columnFilter type="text" field="destino" display="menu"></p-columnFilter>
         </th>
-        <th pSortableColumn="fechaInicio">
+        <th pSortableColumn="fechaInicio" style="width: 15%">
           Inicio
           <p-sortIcon field="fechaInicio"></p-sortIcon>
           <p-columnFilter type="date" field="fechaInicio" display="menu"></p-columnFilter>
         </th>
-        <th pSortableColumn="fechaFin">
+        <th pSortableColumn="fechaFin" style="width: 15%">
           Fin
           <p-sortIcon field="fechaFin"></p-sortIcon>
           <p-columnFilter type="date" field="fechaFin" display="menu"></p-columnFilter>
         </th>
-        <th pSortableColumn="presupuesto">
+        <th pSortableColumn="presupuesto" style="width: 15%">
           Presupuesto
           <p-sortIcon field="presupuesto"></p-sortIcon>
           <p-columnFilter type="numeric" field="presupuesto" display="menu"></p-columnFilter>
         </th>
-        <th pSortableColumn="estatusId">
+        <th pSortableColumn="estatusId" style="width: 15%">
           Estatus
           <p-sortIcon field="estatusId"></p-sortIcon>
           <p-columnFilter field="estatusId" matchMode="equals" [showMenu]="false">
@@ -57,7 +61,7 @@
             </ng-template>
           </p-columnFilter>
         </th>
-        <th>Acciones</th>
+        <th style="width: 20%">Acciones</th>
       </tr>
     </ng-template>
    <ng-template pTemplate="body" let-viaje>
