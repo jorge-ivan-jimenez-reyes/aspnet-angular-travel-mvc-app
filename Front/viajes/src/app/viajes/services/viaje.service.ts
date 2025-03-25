@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Viaje } from '../models/viaje.model';
 import { environment } from '../../../environments/environment';
 
@@ -13,7 +14,13 @@ export class ViajeService {
   constructor(private http: HttpClient) { }
 
   getViajes(): Observable<Viaje[]> {
-    return this.http.get<Viaje[]>(this.apiUrl);
+    return this.http.get<Viaje[]>(this.apiUrl).pipe(
+      map(viajes => viajes.map(viaje => ({
+        ...viaje,
+        fechaInicio: typeof viaje.fechaInicio === 'string' ? new Date(viaje.fechaInicio) : viaje.fechaInicio,
+        fechaFin: typeof viaje.fechaFin === 'string' ? new Date(viaje.fechaFin) : viaje.fechaFin
+      })))
+    );
   }
 
   getViajeById(id: number): Observable<Viaje> {

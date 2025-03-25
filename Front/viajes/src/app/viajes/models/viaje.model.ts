@@ -1,8 +1,8 @@
 export interface Viaje {
   id?: number;
   nombre?: string;
-  fechaInicio: string;
-  fechaFin: string;
+  fechaInicio: string | Date;
+  fechaFin: string | Date;
   origenId: number;
   destinoId: number;
   transporteId: number;
