@@ -20,6 +20,39 @@
   /* PrimeNG custom variables */
   --p-select-option-focus-bg: var(--color-primary-light);
   --p-select-option-focus-color: var(--color-surface);
+
+  /* Override PrimeNG select overlay variables */
+  --p-select-overlay-background: #f8f9fa;
+  --p-select-overlay-color: var(--color-text-primary);
+  --p-select-overlay-border-color: #e9ecef;
+  --p-select-overlay-border-radius: 4px;
+  --p-select-overlay-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Additional styles for select overlay */
+.p-select-overlay {
+  background: var(--p-select-overlay-background) !important;
+  color: var(--p-select-overlay-color) !important;
+  border-color: var(--p-select-overlay-border-color) !important;
+}
+
+.p-select-overlay .p-select-items {
+  padding: 0.5rem 0;
+}
+
+.p-select-overlay .p-select-option {
+  color: var(--color-text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.p-select-overlay .p-select-option:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-surface);
+}
+
+.p-select-overlay .p-select-option.p-highlight {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
 }
 
 /* PrimeNG overrides */
@@ -92,7 +125,31 @@ button:hover,
   width: 100%;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
+.p-select-overlay {
+  background-color: #f8f9fa;
+  z-index: 1000;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
+.p-select-overlay .p-select-items {
+  padding: 0.5rem 0;
+}
+
+.p-select-overlay .p-select-option {
+  color: var(--color-text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.p-select-overlay .p-select-option:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-surface);
+}
+
+.p-select-overlay .p-select-option.p-highlight {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
 .p-inputtext:enabled:hover,
 .p-dropdown:not(.p-disabled):hover,
 .p-multiselect:not(.p-disabled):hover {
