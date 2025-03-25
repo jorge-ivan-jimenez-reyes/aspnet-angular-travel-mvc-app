@@ -31,14 +31,15 @@ export class ViajeFormComponent implements OnInit {
     private messageService: MessageService
   ) {
     this.viajeForm = this.fb.group({
-      nombre: ['', Validators.required],
-      fechaInicio: ['', Validators.required],
-      fechaFin: ['', Validators.required],
-      origenId: ['', Validators.required],
-      destinoId: ['', Validators.required],
+      origen: ['', Validators.required],
+      destino: ['', Validators.required],
+      fechaHoraInicio: ['', Validators.required],
+      fechaHoraFin: ['', Validators.required],
+      operador: ['', Validators.required],
+      presupuesto: ['', [Validators.required, Validators.min(0)]],
+      lugarId: ['', Validators.required],
       transporteId: ['', Validators.required],
       estatusId: ['', Validators.required],
-      costo: ['', [Validators.required, Validators.min(0)]],
       descripcion: ['']
     });
   }

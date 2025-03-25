@@ -17,8 +17,8 @@ export class ViajeService {
     return this.http.get<Viaje[]>(this.apiUrl).pipe(
       map(viajes => viajes.map(viaje => ({
         ...viaje,
-        fechaInicio: typeof viaje.fechaInicio === 'string' ? new Date(viaje.fechaInicio) : viaje.fechaInicio,
-        fechaFin: typeof viaje.fechaFin === 'string' ? new Date(viaje.fechaFin) : viaje.fechaFin
+        fechaHoraInicio: typeof viaje.fechaHoraInicio === 'string' ? new Date(viaje.fechaHoraInicio) : viaje.fechaHoraInicio,
+        fechaHoraFin: typeof viaje.fechaHoraFin === 'string' ? new Date(viaje.fechaHoraFin) : viaje.fechaHoraFin
       })))
     );
   }

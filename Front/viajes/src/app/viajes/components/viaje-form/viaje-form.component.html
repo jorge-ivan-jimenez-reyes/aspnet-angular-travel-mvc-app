@@ -2,23 +2,35 @@
 <div class="viaje-form-container">
   <h2>{{ isEditing ? 'Editar' : 'Nuevo' }} Viaje</h2>
   <form [formGroup]="viajeForm" (ngSubmit)="onSubmit()">
-    <div class="p-field">
-      <label for="destino">Destino</label>
-      <input id="destino" type="text" pInputText formControlName="destino" required>
-      <small *ngIf="viajeForm.get('destino')?.hasError('required') && viajeForm.get('destino')?.touched" class="p-error">El destino es requerido</small>
-    </div>
+<div class="p-field">
+  <label for="origen">Origen</label>
+  <input id="origen" type="text" pInputText formControlName="origen" required>
+  <small *ngIf="viajeForm.get('origen')?.hasError('required') && viajeForm.get('origen')?.touched" class="p-error">El origen es requerido</small>
+</div>
 
-    <div class="p-field">
-      <label for="fechaInicio">Fecha de Inicio</label>
-      <input type="date" id="fechaInicio" formControlName="fechaInicio" class="p-inputtext p-component p-datepicker-input" required>
-      <small *ngIf="viajeForm.get('fechaInicio')?.hasError('required') && viajeForm.get('fechaInicio')?.touched" class="p-error">La fecha de inicio es requerida</small>
-    </div>
+<div class="p-field">
+  <label for="destino">Destino (lugar donde termina el viaje)</label>
+  <input id="destino" type="text" pInputText formControlName="destino" required>
+  <small *ngIf="viajeForm.get('destino')?.hasError('required') && viajeForm.get('destino')?.touched" class="p-error">El destino es requerido</small>
+</div>
 
-    <div class="p-field">
-      <label for="fechaFin">Fecha de Fin</label>
-      <input type="date" id="fechaFin" formControlName="fechaFin" class="p-inputtext p-component p-datepicker-input" required>
-      <small *ngIf="viajeForm.get('fechaFin')?.hasError('required') && viajeForm.get('fechaFin')?.touched" class="p-error">La fecha de fin es requerida</small>
-    </div>
+<div class="p-field">
+  <label for="fechaHoraInicio">Fecha y Hora de Inicio Programado</label>
+  <p-calendar id="fechaHoraInicio" formControlName="fechaHoraInicio" [showTime]="true" [showSeconds]="true" dateFormat="dd/mm/yy" inputId="timeonly" required></p-calendar>
+  <small *ngIf="viajeForm.get('fechaHoraInicio')?.hasError('required') && viajeForm.get('fechaHoraInicio')?.touched" class="p-error">La fecha y hora de inicio son requeridas</small>
+</div>
+
+<div class="p-field">
+  <label for="fechaHoraFin">Fecha y Hora de Fin Programado</label>
+  <p-calendar id="fechaHoraFin" formControlName="fechaHoraFin" [showTime]="true" [showSeconds]="true" dateFormat="dd/mm/yy" inputId="timeonly" required></p-calendar>
+  <small *ngIf="viajeForm.get('fechaHoraFin')?.hasError('required') && viajeForm.get('fechaHoraFin')?.touched" class="p-error">La fecha y hora de fin son requeridas</small>
+</div>
+
+<div class="p-field">
+  <label for="operador">Operador</label>
+  <input id="operador" type="text" pInputText formControlName="operador" required>
+  <small *ngIf="viajeForm.get('operador')?.hasError('required') && viajeForm.get('operador')?.touched" class="p-error">El operador es requerido</small>
+</div>
 
     <div class="p-field">
       <label for="presupuesto">Presupuesto</label>

@@ -1,12 +1,13 @@
 export interface Viaje {
   id?: number;
-  nombre?: string;
-  fechaInicio: string | Date;
-  fechaFin: string | Date;
-  origenId: number;
-  destinoId: number;
-  transporteId: number;
+  origen: string;
+  destino: string;
+  fechaHoraInicio: string | Date;
+  fechaHoraFin: string | Date;
+  operador: string;
+  presupuesto: number;
+  lugarId: number;
+  transporteId?: number;
   estatusId: number;
-  costo?: number;
   descripcion?: string;
 }
