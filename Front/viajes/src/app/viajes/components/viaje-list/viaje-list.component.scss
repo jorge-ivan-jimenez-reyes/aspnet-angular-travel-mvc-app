@@ -15,19 +15,20 @@
   .p-datatable {
     border-radius: 8px;
     overflow: hidden;
+    color: var(--color-text-primary);
 
     .p-datatable-header {
-      background-color: var(--color-muted);
+      background-color: var(--color-surface-light);
       color: var(--color-text-primary);
       padding: 1rem;
-      border-bottom: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border-light);
       font-weight: 600;
     }
 
     .p-datatable-thead > tr > th {
-      background-color: var(--color-surface);
+      background-color: var(--color-surface-light);
       color: var(--color-text-primary);
-      border-color: var(--color-border);
+      border-color: var(--color-border-light);
       font-size: 0.95rem;
       font-weight: 600;
       padding: 0.75rem 1rem;
@@ -38,13 +39,51 @@
       transition: background-color 0.2s ease;
 
       &:hover {
-        background-color: var(--color-muted);
+        background-color: var(--color-surface-light);
       }
 
       > td {
-        border-color: var(--color-border);
+        border-color: var(--color-border-light);
         color: var(--color-text-primary);
         padding: 0.75rem 1rem;
+      }
+    }
+
+    .p-column-filter {
+      background-color: var(--color-surface-light);
+
+      .p-inputtext,
+      .p-dropdown,
+      .p-multiselect {
+        background-color: var(--color-surface);
+        color: var(--color-text-primary);
+        border-color: var(--color-border-light);
+
+        &:focus {
+          border-color: var(--color-primary);
+        }
+      }
+    }
+
+    .p-paginator {
+      background-color: var(--color-surface-light);
+      color: var(--color-text-primary);
+
+      .p-paginator-pages .p-paginator-page,
+      .p-paginator-first,
+      .p-paginator-prev,
+      .p-paginator-next,
+      .p-paginator-last {
+        color: var(--color-text-primary);
+
+        &:not(.p-highlight):hover {
+          background-color: var(--color-surface);
+        }
+
+        &.p-highlight {
+          background-color: var(--color-primary);
+          color: var(--color-surface);
+        }
       }
     }
   }
@@ -66,7 +105,7 @@
     border: 1px solid var(--color-border);
 
     .p-dropdown-label {
-      color: var(--color-text-primary);
+      color: var(--color-text-light);
     }
 
     .p-dropdown-trigger {

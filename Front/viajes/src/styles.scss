@@ -3,11 +3,14 @@
   --color-primary: #1A4C7B;        /* Azul principal */
   --color-primary-light: #336b9c;  /* Azul para hover y fondos suaves */
   --color-surface: #ffffff;        /* Tarjetas y superficies blancas */
+  --color-surface-light: #f8fafc;  /* Fondo más claro para elementos de la tabla */
   --color-background: #f8fafc;     /* Fondo general muy claro */
   --color-muted: #f0f4f8;          /* Fondos secundarios */
   --color-border: #dbe3ec;         /* Bordes sutiles */
+  --color-border-light: #edf2f7;   /* Bordes más claros para la tabla */
   --color-text-primary: #1A4C7B;   /* Texto principal (usando el azul principal) */
   --color-text-secondary: #5a7897; /* Texto secundario */
+  --color-text-light: #64748b;     /* Texto más claro para elementos secundarios */
 
   /* Opcionales semánticos */
   --color-success: #27ae60;
