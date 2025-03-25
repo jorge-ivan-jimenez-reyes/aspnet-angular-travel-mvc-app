@@ -22,43 +22,80 @@
   --p-select-option-focus-color: var(--color-surface);
 
   /* Override PrimeNG select overlay variables */
-  --p-select-overlay-background: #f8f9fa;
+  --p-select-overlay-background: #ffffff;
   --p-select-overlay-color: var(--color-text-primary);
   --p-select-overlay-border-color: #e9ecef;
   --p-select-overlay-border-radius: 4px;
   --p-select-overlay-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  /* Add PrimeNG input background variable */
+  --p-inputtext-background: #ffffff;
+}
+
+/* Ensure the select overlay uses the new background color */
+.p-select-overlay,
+.p-dropdown-panel,
+.p-multiselect-panel {
+  background: #ffffff !important;
+  color: var(--color-text-primary) !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.p-dropdown-items-wrapper,
+.p-multiselect-items-wrapper {
+  background: #ffffff !important;
+}
+
+.p-dropdown-item,
+.p-multiselect-item {
+  color: var(--color-text-primary) !important;
+}
+
+.p-dropdown-item:hover,
+.p-multiselect-item:hover {
+  background-color: #f8f9fa !important;
+}
+
+.p-dropdown-item.p-highlight,
+.p-multiselect-item.p-highlight {
+  background-color: #e9ecef !important;
+  color: var(--color-text-primary) !important;
 }
 
 /* Additional styles for select overlay */
-.p-select-overlay {
-  background: var(--p-select-overlay-background) !important;
-  color: var(--p-select-overlay-color) !important;
-  border-color: var(--p-select-overlay-border-color) !important;
+:host ::ng-deep .p-select-overlay.light-background {
+  background-color: #ffffff !important;
+  color: var(--color-text-primary) !important;
+  border-color: #e9ecef !important;
 }
 
-.p-select-overlay .p-select-items {
+:host ::ng-deep .p-select-overlay.light-background .p-select-items {
   padding: 0.5rem 0;
 }
 
-.p-select-overlay .p-select-option {
+:host ::ng-deep .p-select-overlay.light-background .p-select-option {
   color: var(--color-text-primary);
   transition: background-color 0.3s, color 0.3s;
 }
 
-.p-select-overlay .p-select-option:hover {
+:host ::ng-deep .p-select-overlay.light-background .p-select-option:hover {
   background-color: var(--color-primary-light);
   color: var(--color-surface);
 }
 
-.p-select-overlay .p-select-option.p-highlight {
+:host ::ng-deep .p-select-overlay.light-background .p-select-option.p-highlight {
   background-color: var(--color-primary);
   color: var(--color-surface);
 }
 
 /* PrimeNG overrides */
-.p-select-option:not(.p-select-option-selected):not(.p-disabled).p-focus {
-  background: var(--p-select-option-focus-bg);
-  color: var(--p-select-option-focus-color);
+.p-select-option:not(.p-select-option-selected):not(.p-disabled).p-focus,
+.p-dropdown-item.p-focus,
+.p-multiselect-item.p-focus {
+  background: #dedef3 !important;
+  color: var(--color-text-primary) !important;
 }
 
 /* RESET Y ESTILOS BASE */
@@ -113,18 +150,8 @@ button:hover,
   padding: 1rem;
 }
 
-/* INPUTS Y CONTROLES */
-.p-inputtext,
-.p-dropdown,
-.p-multiselect {
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  color: #495057;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  width: 100%;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
-}
+
+
 .p-select-overlay {
   background-color: #f8f9fa;
   z-index: 1000;

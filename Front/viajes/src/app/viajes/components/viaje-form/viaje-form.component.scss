@@ -32,7 +32,9 @@
       .p-inputnumber {
         width: 100%;
       }
-
+      .p-inputnumber .p-inputtext {
+        background-color: var(--color-background) !important;
+    }
       .p-inputtext,
       .p-dropdown,
       .p-calendar .p-inputtext,
@@ -40,8 +42,8 @@
       input[type="date"] {
         padding: 0.5rem 0.75rem;
         font-size: 1rem;
-        color: var(--color-text-primary);
-        background-color: var(--color-surface);
+        color: var(--color-background);
+        background-color: var(--color-background);
         border: 1px solid var(--color-border);
         transition: border-color 0.2s, box-shadow 0.2s;
 
@@ -90,7 +92,7 @@
 
 :host ::ng-deep {
   .p-dropdown {
-    background-color: var(--color-surface);
+    background-color: var(--color-background);
     border: 1px solid var(--color-border);
 
     &:not(.p-disabled).p-focus {
@@ -114,12 +116,14 @@
 
   .p-inputnumber {
     .p-inputtext {
-      border: none;
-      background-color: transparent;
-      padding: 0;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-background);
+      color: var(--color-background);
+      padding: 0.5rem 0.75rem;
 
       &:focus {
-        box-shadow: none;
+        box-shadow: 0 0 0 0.2rem rgba(26, 76, 123, 0.2);
+        border-color: var(--color-primary);
       }
     }
   }
