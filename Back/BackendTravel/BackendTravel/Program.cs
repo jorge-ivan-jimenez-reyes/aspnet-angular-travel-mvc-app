@@ -19,7 +19,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         .EnableSensitiveDataLogging() // 
         .LogTo(Console.WriteLine, LogLevel.Information);
 });
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 builder.Services.AddScoped<IViajeRepository, ViajeRepository>();
 builder.Services.AddScoped<IViajeService, ViajeService>();

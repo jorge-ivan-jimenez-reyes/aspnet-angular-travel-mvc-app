@@ -23,6 +23,7 @@ import { ViajeFormComponent } from './components/viaje-form/viaje-form.component
 
 import { ViajeService } from './services/viaje.service';
 import { CatalogoService } from './services/catalogo.service';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { CatalogoService } from './services/catalogo.service';
   ],
   providers: [
     ViajeService,
-    CatalogoService
+    CatalogoService,
+    MessageService
   ]
 })
 export class ViajesModule { }

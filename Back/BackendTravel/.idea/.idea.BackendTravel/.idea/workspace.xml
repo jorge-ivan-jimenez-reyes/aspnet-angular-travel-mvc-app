@@ -8,7 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output" />
+    <list default="true" id="6ab8cf7e-6d8b-4ca0-aec6-a86f7597848b" name="Changes" comment="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendTravel/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackendTravel/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front/viajes/src/app/viajes/components/viajes/viajes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front/viajes/src/app/viajes/components/viajes/viajes.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +152,7 @@
       <updated>1742754512069</updated>
       <workItem from="1742754513879" duration="1619000" />
       <workItem from="1742756140629" duration="14410000" />
-      <workItem from="1742775495080" duration="25029000" />
+      <workItem from="1742775495080" duration="25646000" />
     </task>
     <task id="LOCAL-00014" summary="Transporte.cs">
       <option name="closed" value="true" />

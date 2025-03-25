@@ -111,11 +111,11 @@ export class ViajeListComponent implements OnInit {
     return this.lugares[lugarId]?.nombre || 'Desconocido';
   }
 
-  getEstatusColor(estatusId: number): 'success' | 'info' | 'warning' | 'danger' {
+  getEstatusColor(estatusId: number): 'success' | 'info' | 'warn' | 'danger' {
     const estatus = this.getEstatusNombre(estatusId).toLowerCase();
     switch (estatus) {
       case 'pendiente':
-        return 'warning';
+        return 'warn';
       case 'en progreso':
         return 'info';
       case 'completado':

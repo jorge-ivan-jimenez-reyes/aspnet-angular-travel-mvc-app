@@ -1,8 +1,12 @@
 <div class="viajes-container">
-  <h1>Gestión de Viajes</h1>
-  <nav>
-    <a routerLink="./list" routerLinkActive="active">Lista de Viajes</a>
-    <a routerLink="./new" routerLinkActive="active">Nuevo Viaje</a>
-  </nav>
-  <router-outlet></router-outlet>
+  <h1>{{ title }}</h1>
+  <p-toolbar>
+    <div class="p-toolbar-group-left">
+      <p-button label="Lista de Viajes" icon="pi pi-list" routerLink="./list" routerLinkActive="p-button-secondary"></p-button>
+      <p-button label="Nuevo Viaje" icon="pi pi-plus" (onClick)="navigateToNewViaje()" routerLinkActive="p-button-secondary"></p-button>
+    </div>
+  </p-toolbar>
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
