@@ -22,26 +22,14 @@
 
 <div class="p-field">
   <label for="fechaInicio">Fecha de Inicio</label>
-  <p-calendar id="fechaInicio" formControlName="fechaInicio" dateFormat="dd/mm/yy" [showIcon]="true" required></p-calendar>
+  <p-datepicker id="fechaInicio" formControlName="fechaInicio" dateFormat="dd/mm/yy" [showIcon]="true" required></p-datepicker>
   <small *ngIf="viajeForm.get('fechaInicio')?.hasError('required') && viajeForm.get('fechaInicio')?.touched" class="p-error">La fecha de inicio es requerida</small>
 </div>
 
 <div class="p-field">
   <label for="fechaFin">Fecha de Fin</label>
-  <p-calendar id="fechaFin" formControlName="fechaFin" dateFormat="dd/mm/yy" [showIcon]="true" required></p-calendar>
+  <p-datepicker id="fechaFin" formControlName="fechaFin" dateFormat="dd/mm/yy" [showIcon]="true" required></p-datepicker>
   <small *ngIf="viajeForm.get('fechaFin')?.hasError('required') && viajeForm.get('fechaFin')?.touched" class="p-error">La fecha de fin es requerida</small>
-</div>
-
-<div class="p-field">
-  <label for="costo">Costo</label>
-  <p-inputNumber id="costo" formControlName="costo" [min]="0" mode="currency" currency="USD" locale="en-US" required [style]="{'background-color': '#ffffff', 'color': 'var(--color-background)'}"></p-inputNumber>
-  <small *ngIf="viajeForm.get('costo')?.hasError('required') && viajeForm.get('costo')?.touched" class="p-error">El costo es requerido</small>
-  <small *ngIf="viajeForm.get('costo')?.hasError('min') && viajeForm.get('costo')?.touched" class="p-error">El costo debe ser mayor o igual a 0</small>
-</div>
-
-<div class="p-field">
-  <label for="descripcion">Descripción</label>
-  <textarea id="descripcion" pInputTextarea formControlName="descripcion" rows="3"></textarea>
 </div>
 
 <div class="p-field">
@@ -56,9 +44,21 @@
   <small *ngIf="viajeForm.get('transporteId')?.hasError('required') && viajeForm.get('transporteId')?.touched" class="p-error">El transporte es requerido</small>
 </div>
 
-    <div class="form-actions">
-      <p-button type="submit" label="Guardar" [disabled]="!viajeForm.valid"></p-button>
-      <p-button type="button" label="Cancelar" (onClick)="navigateToViajes()" styleClass="p-button-secondary"></p-button>
-    </div>
+<div class="p-field">
+  <label for="costo">Costo</label>
+  <p-inputNumber id="costo" formControlName="costo" mode="currency" currency="USD" locale="en-US" [min]="0" required></p-inputNumber>
+  <small *ngIf="viajeForm.get('costo')?.hasError('required') && viajeForm.get('costo')?.touched" class="p-error">El costo es requerido</small>
+  <small *ngIf="viajeForm.get('costo')?.hasError('min') && viajeForm.get('costo')?.touched" class="p-error">El costo debe ser mayor o igual a 0</small>
+</div>
+
+<div class="p-field">
+  <label for="descripcion">Descripción</label>
+  <textarea id="descripcion" pInputTextarea formControlName="descripcion" rows="3"></textarea>
+</div>
+
+<div class="form-actions">
+  <p-button type="submit" label="Guardar" [disabled]="!viajeForm.valid"></p-button>
+  <p-button type="button" label="Cancelar" (onClick)="navigateToViajes()" styleClass="p-button-secondary"></p-button>
+</div>
   </form>
 </div>
