@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37f1cd4a-adb9-4c51-a52a-1c5003dccaff" name="Changes" comment="Refactor styles in app.component.scss and styles.scss for improved readability and consistency; update home.component.html to enhance layout and user experience">
+      <change beforePath="$PROJECT_DIR$/../Back/BackendTravel/.idea/.idea.BackendTravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/BackendTravel/.idea/.idea.BackendTravel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viajes/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/app/viajes/components/viaje-form/viaje-form.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/viajes/components/viaje-form/viaje-form.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/app/viajes/components/viaje-list/viaje-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/app/viajes/components/viaje-list/viaje-list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +77,7 @@
       <workItem from="1742777709902" duration="528000" />
       <workItem from="1742778251441" duration="2169000" />
       <workItem from="1742798686585" duration="2528000" />
-      <workItem from="1742843221565" duration="4776000" />
+      <workItem from="1742843221565" duration="7563000" />
     </task>
     <task id="LOCAL-00001" summary="Update workspace configuration to enhance DbContext with sensitive data logging and console output">
       <option name="closed" value="true" />
@@ -291,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742850745201</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Refactor styles in app.component.scss and styles.scss for improved readability and consistency; update home.component.html to enhance layout and user experience">
+      <option name="closed" value="true" />
+      <created>1742850839530</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1742850839532</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

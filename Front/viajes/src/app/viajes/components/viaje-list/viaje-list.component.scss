@@ -1,87 +1,141 @@
 :host ::ng-deep {
   .viaje-list-container {
-    background-color: #ffffff;
+    background-color: var(--color-surface);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     padding: 1rem;
   }
 
   .p-card {
-    background-color: #ffffff;
+    background-color: var(--color-surface);
     border: none;
     box-shadow: none;
   }
 
   .p-datatable {
+    border-radius: 8px;
+    overflow: hidden;
+
     .p-datatable-header {
-      background-color: #ffffff;
-      border-color: #f8f9fa;
+      background-color: var(--color-muted);
+      color: var(--color-text-primary);
+      padding: 1rem;
+      border-bottom: 1px solid var(--color-border);
+      font-weight: 600;
     }
 
     .p-datatable-thead > tr > th {
-      background-color: #ffffff;
-      color: #333333;
-      border-color: #f8f9fa;
+      background-color: var(--color-surface);
+      color: var(--color-text-primary);
+      border-color: var(--color-border);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.75rem 1rem;
     }
 
     .p-datatable-tbody > tr {
-      background-color: #ffffff;
+      background-color: var(--color-surface);
+      transition: background-color 0.2s ease;
 
-      &:nth-child(even) {
-        background-color: #ffffff;
+      &:hover {
+        background-color: var(--color-muted);
       }
 
       > td {
-        border-color: #f8f9fa;
+        border-color: var(--color-border);
+        color: var(--color-text-primary);
+        padding: 0.75rem 1rem;
       }
     }
   }
 
   .p-inputtext {
-    background-color: #ffffff;
-    border-color: #e9ecef;
-    color: #333333;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    border-radius: 4px;
 
     &:enabled:focus {
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.1);
+      box-shadow: 0 0 0 2px rgba(26, 76, 123, 0.2);
+      border-color: var(--color-primary);
     }
   }
 
   .p-dropdown {
-    background-color: #ffffff;
-    border-color: #e9ecef;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
 
     .p-dropdown-label {
-      color: #333333;
+      color: var(--color-text-primary);
     }
 
     .p-dropdown-trigger {
-      background-color: #ffffff;
+      background-color: var(--color-surface);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(26, 76, 123, 0.2);
+      border-color: var(--color-primary);
     }
   }
 
   .p-button {
+    font-weight: 500;
+    border-radius: 6px;
+
     &.p-button-sm {
       font-size: 0.875rem;
       padding: 0.4rem 0.8rem;
+    }
+
+    &.p-button-primary {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #fff;
+
+      &:hover {
+        background-color: var(--color-primary-light);
+        border-color: var(--color-primary-light);
+      }
+    }
+
+    &.p-button-secondary {
+      background-color: var(--color-muted);
+      border-color: var(--color-muted);
+      color: var(--color-text-primary);
+
+      &:hover {
+        background-color: var(--color-border);
+      }
     }
   }
 
   .p-tag {
     border-radius: 4px;
     padding: 0.25rem 0.5rem;
+    font-weight: 500;
+    font-size: 0.85rem;
   }
 
   .p-paginator {
-    background-color: #ffffff;
-    color: #333333;
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    padding: 1rem;
+    border-top: 1px solid var(--color-border);
 
-    .p-paginator-pages .p-paginator-page {
-      color: #333333;
+    .p-paginator-pages {
+      .p-paginator-page {
+        color: var(--color-text-primary);
+        border-radius: 4px;
 
-      &.p-highlight {
-        background-color: #f8f9fa;
-        color: #333333;
+        &:hover {
+          background-color: var(--color-muted);
+        }
+
+        &.p-highlight {
+          background-color: var(--color-primary);
+          color: #fff;
+        }
       }
     }
 
@@ -89,11 +143,35 @@
     .p-paginator-prev,
     .p-paginator-next,
     .p-paginator-last {
-      color: #333333;
+      color: var(--color-text-primary);
+      border-radius: 4px;
 
       &:not(.p-disabled):not(.p-highlight):hover {
-        background-color: #f8f9fa;
+        background-color: var(--color-muted);
       }
+    }
+  }
+
+  // Custom styles for p-tag severities
+  .p-tag {
+    color: #ffffff;
+    font-weight: 500;
+    
+    &.p-tag-success {
+      background-color: var(--color-success);
+    }
+    
+    &.p-tag-info {
+      background-color: var(--color-primary);
+    }
+    
+    &.p-tag-warning {
+      background-color: var(--color-warning);
+      color: #000000; // Black text for better contrast on yellow background
+    }
+    
+    &.p-tag-danger {
+      background-color: var(--color-error);
     }
   }
 }
