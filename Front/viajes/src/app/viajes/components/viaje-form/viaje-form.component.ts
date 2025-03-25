@@ -72,11 +72,7 @@ export class ViajeFormComponent implements OnInit {
   loadViaje(id: number): void {
     this.viajeService.getViajeById(id).subscribe(
       (viaje) => {
-        this.viajeForm.patchValue({
-          ...viaje,
-          fechaInicio: new Date(viaje.fechaInicio),
-          fechaFin: new Date(viaje.fechaFin)
-        });
+        this.viajeForm.patchValue(viaje);
       },
       (error) => {
         console.error('Error fetching viaje:', error);
@@ -87,11 +83,7 @@ export class ViajeFormComponent implements OnInit {
 
   onSubmit(): void {
     if (this.viajeForm.valid) {
-      const viaje: Viaje = {
-        ...this.viajeForm.value,
-        fechaInicio: this.viajeForm.value.fechaInicio.toISOString(),
-        fechaFin: this.viajeForm.value.fechaFin.toISOString()
-      };
+      const viaje: Viaje = this.viajeForm.value;
       if (this.isEditing) {
         const id = this.route.snapshot.paramMap.get('id');
         if (id) {

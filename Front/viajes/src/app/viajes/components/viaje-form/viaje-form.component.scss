@@ -1,82 +1,125 @@
 .viaje-form-container {
-  padding: 2rem;
-  background-color: var(--color-background); // Fondo general muy claro
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  background-color: var(--color-background);
 
   h2 {
-    margin-bottom: 1.5rem;
-    color: var(--color-primary); // Azul principal
+    margin-bottom: 1rem;
+    color: var(--color-primary);
     font-weight: 600;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   form {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
 
-    .form-field {
+    .p-field {
       display: flex;
       flex-direction: column;
 
       label {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
         font-weight: 500;
         color: var(--color-text-primary);
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
 
       input,
       select,
-      textarea {
-        padding: 0.75rem 1rem;
+      textarea,
+      .p-dropdown,
+      .p-calendar,
+      .p-inputnumber {
+        width: 100%;
+      }
+
+      .p-inputtext,
+      .p-dropdown,
+      .p-calendar .p-inputtext,
+      .p-inputnumber .p-inputtext,
+      input[type="date"] {
+        padding: 0.5rem 0.75rem;
         font-size: 1rem;
-        border: 1px solid var(--color-border);
-        border-radius: 6px;
-        background-color: var(--color-surface);
         color: var(--color-text-primary);
-        transition: border 0.2s ease, box-shadow 0.2s ease;
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        transition: border-color 0.2s, box-shadow 0.2s;
+
+        &:hover {
+          border-color: var(--color-primary);
+        }
 
         &:focus {
           outline: none;
-          border-color: var(--color-primary-light); // Azul para hover
-          box-shadow: 0 0 0 3px rgba(51, 107, 156, 0.15);
+          border-color: var(--color-primary);
+          box-shadow: 0 0 0 0.2rem rgba(26, 76, 123, 0.2);
+        }
+      }
+
+      .p-dropdown {
+        .p-dropdown-label {
+          color: var(--color-text-primary);
+        }
+
+        .p-dropdown-trigger {
+          background-color: transparent;
+          color: var(--color-text-primary);
         }
       }
     }
   }
 
   .form-actions {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
 
-    button {
-      padding: 0.75rem 1.5rem;
+    .p-button {
+      padding: 0.5rem 1rem;
       font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, filter 0.2s ease;
 
-      &.submit {
-        background-color: var(--color-primary);
-        color: #fff;
-
-        &:hover {
-          background-color: var(--color-primary-light);
-        }
-      }
-
-      &.cancel {
+      &.p-button-secondary {
         background-color: transparent;
         color: var(--color-text-primary);
         border: 1px solid var(--color-text-primary);
+      }
+    }
+  }
+}
 
-        &:hover {
-          background-color: var(--color-muted);
+:host ::ng-deep {
+  .p-dropdown {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+
+    &:not(.p-disabled).p-focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 0.2rem rgba(26, 76, 123, 0.2);
+    }
+  }
+
+  .p-dropdown-panel {
+    .p-dropdown-items {
+      .p-dropdown-item {
+        color: var(--color-text-primary);
+
+        &.p-highlight {
+          background-color: var(--color-primary-light);
+          color: #ffffff;
         }
+      }
+    }
+  }
+
+  .p-inputnumber {
+    .p-inputtext {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+
+      &:focus {
+        box-shadow: none;
       }
     }
   }

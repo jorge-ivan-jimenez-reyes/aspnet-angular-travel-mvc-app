@@ -1,14 +1,13 @@
-<div class="card">
+<div class="viaje-list-container">
   <p-table
    #dt
    [value]="viajes"
    dataKey="id"
    [rows]="10"
-   [rowsPerPageOptions]="[10, 25, 50]"
-   [loading]="loading"
    [paginator]="true"
+   [loading]="loading"
    [globalFilterFields]="['destino', 'fechaInicio', 'fechaFin', 'presupuesto', 'lugarId', 'estatusId', 'transporteId']"
-   [tableStyle]="{ 'min-width': '75rem' }"
+   styleClass="custom-paginator-table larger-components"
 >
    <ng-template pTemplate="caption">
        <div class="flex">

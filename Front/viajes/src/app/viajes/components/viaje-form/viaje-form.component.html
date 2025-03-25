@@ -10,13 +10,13 @@
 
     <div class="p-field">
       <label for="fechaInicio">Fecha de Inicio</label>
-      <p-calendar id="fechaInicio" formControlName="fechaInicio" [showIcon]="true" required></p-calendar>
+      <input type="date" id="fechaInicio" formControlName="fechaInicio" class="p-inputtext p-component p-datepicker-input" required>
       <small *ngIf="viajeForm.get('fechaInicio')?.hasError('required') && viajeForm.get('fechaInicio')?.touched" class="p-error">La fecha de inicio es requerida</small>
     </div>
 
     <div class="p-field">
       <label for="fechaFin">Fecha de Fin</label>
-      <p-calendar id="fechaFin" formControlName="fechaFin" [showIcon]="true" required></p-calendar>
+      <input type="date" id="fechaFin" formControlName="fechaFin" class="p-inputtext p-component p-datepicker-input" required>
       <small *ngIf="viajeForm.get('fechaFin')?.hasError('required') && viajeForm.get('fechaFin')?.touched" class="p-error">La fecha de fin es requerida</small>
     </div>
 
